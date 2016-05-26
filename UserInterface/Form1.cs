@@ -21,11 +21,11 @@ namespace UserInterface
         SignIn sign = new SignIn();
 
 
+     
 
-        private void tabPage1_Enter(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             sign.ShowDialog();
         }
-
     }
 }

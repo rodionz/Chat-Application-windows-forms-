@@ -16,5 +16,16 @@ namespace UserInterface
         {
             InitializeComponent();
         }
+
+
+        SignIn sign = new SignIn();
+
+
+
+        private void tabPage1_Enter(object sender, EventArgs e)
+        {
+            sign.ShowDialog();
+        }
+
     }
 }

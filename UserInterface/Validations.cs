@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace UserInterface
 {
-    class ValidationBooleans
+    class ValidationsAngGlobalBooleans
     {
-        public static bool SignInisValid = false;
-
+       
+            public static bool SignInisValid = false;
+      
 
     }
 }

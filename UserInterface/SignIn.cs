@@ -22,7 +22,7 @@ using System.Windows.Forms;
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ValidationBooleans.SignInisValid == false)
+            if (ValidationsAngGlobalBooleans.SignInisValid == false)
             {
 
                 e.Cancel = true;

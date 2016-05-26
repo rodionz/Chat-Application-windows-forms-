@@ -14,6 +14,7 @@ using System.Net.Sockets;
 
 
 
+
 namespace UserInterface
 {
     public partial class SignIn : Form
@@ -29,7 +30,7 @@ namespace UserInterface
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ValidationsAngGlobalBooleans.SignInisValid == false)
+            if (Validators_GlobalBooleans.SignInisValid == false)
             {
                 
                 //e.Cancel = true;
@@ -52,14 +53,20 @@ namespace UserInterface
 
 
             bool b = IPAddress.TryParse(adress, out clientIpAddr);
+
+
             if (b == true)
-                Close();
+            {
+                //if (clientIpAddr == serv )
+
+
+
+            }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            IPmaskedTextBox.ValidateText();
-        }
+
+
+
     }
 }

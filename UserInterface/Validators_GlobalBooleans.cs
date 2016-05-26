@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace UserInterface
 {
-    class ValidationsAngGlobalBooleans
+    class Validators_GlobalBooleans
     {
        
-            public static bool SignInisValid = false;
-      
+          internal static bool SignInisValid = false;
 
+         
+      
+            
     }
 }

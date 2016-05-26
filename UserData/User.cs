@@ -15,7 +15,8 @@ namespace UserData
     public class User : Data
     {
 
-      
+      public string Nickname
+        { get; set; }
 
 
     }

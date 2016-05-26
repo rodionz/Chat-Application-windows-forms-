@@ -17,6 +17,22 @@ namespace TCP_Client
     {
         static void Main(string[] args)
         {
+
+            User user1 = new User();
+
+            TcpClient client = new TcpClient();
+            client.Connect(IPAddress.Parse(user1.IP), user1.Port);
+            NetworkStream stream = client.GetStream();
+            BinaryFormatter formatter = new BinaryFormatter();
+          
+          
+           
+
+            stream.Close();
+            client.Close();
+
+
+
         }
     }
 }

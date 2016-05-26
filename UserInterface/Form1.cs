@@ -19,13 +19,24 @@ namespace UserInterface
 
 
         SignIn sign = new SignIn();
-
-
-     
+    
 
         private void Form1_Load(object sender, EventArgs e)
         {
             sign.ShowDialog();
+        }
+
+        private void ColorChoosing_Click(object sender, EventArgs e)
+        {
+            colorDialog1.AllowFullOpen = true;
+            colorDialog1.AnyColor = true;
+            DialogResult result = colorDialog1.ShowDialog();
+           
+            if (result == DialogResult.OK)
+            {
+                
+                this.BackColor = colorDialog1.Color;
+            }
         }
     }
 }

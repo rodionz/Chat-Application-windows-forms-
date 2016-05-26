@@ -25,7 +25,7 @@ using System.Windows.Forms;
             if (ValidationsAngGlobalBooleans.SignInisValid == false)
             {
 
-                e.Cancel = true;
+                //e.Cancel = true;
             }
         }
 

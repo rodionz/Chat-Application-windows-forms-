@@ -7,8 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
 
- namespace UserInterface
+
+
+
+namespace UserInterface
 {
     public partial class SignIn : Form
     {
@@ -18,20 +24,42 @@ using System.Windows.Forms;
             InitializeComponent();
         }
 
-     
+       
+       
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (ValidationsAngGlobalBooleans.SignInisValid == false)
             {
-
+                
                 //e.Cancel = true;
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void IPmaskedTextBox_Validating(object sender, CancelEventArgs e)
         {
+            this.IPmaskedTextBox.ValidatingType = typeof(IPAddress);
+            IPAddress clientIpAddr;
 
+            char[] delimit = {' '};
+            string[] str = IPmaskedTextBox.Text.Split();
+            string separator = "";
+
+
+
+
+            string adress = string.Join(separator, str);
+
+
+            bool b = IPAddress.TryParse(adress, out clientIpAddr);
+            if (b == true)
+                Close();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IPmaskedTextBox.ValidateText();
         }
     }
 }

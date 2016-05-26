@@ -8,15 +8,15 @@ using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
-using UserData;
 using CommonData;
 
-namespace TCP_Client
+namespace UserData
 {
-    class Program
+    public class User : Data
     {
-        static void Main(string[] args)
-        {
-        }
+
+      
+
+
     }
 }

@@ -19,8 +19,8 @@ namespace TCP_Server
         static void Main(string[] args)
         {
             Server server = new Server();
-            Form1 mainform = new Form1();
-            SignIn sign = new SignIn();
+            
+            
 
            
             

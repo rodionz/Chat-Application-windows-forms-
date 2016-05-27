@@ -21,9 +21,11 @@ namespace UserInterface
 {
     public partial class SignIn : Form
     {
+        public Server server1;
+
         public SignIn()
         {
-
+            server1 = new Server();
             InitializeComponent();
         }
 
@@ -59,20 +61,37 @@ namespace UserInterface
 
             if (b == true)
             {
-                //if (clientIpAddr == server.)
+                if (clientIpAddr.ToString() == server1.IP)
+                {
+
+                }
+
+                else
+                {
 
 
+                }
 
             }
 
         }
+
+       
+
+        private void NicknameConfirmationButton_Click(object sender, EventArgs e)
+        {
+          
+
+        }
+
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             User user1 = new User();
             TcpClient client1 = new TcpClient();
 
-            
+
         }
+
     }
 }

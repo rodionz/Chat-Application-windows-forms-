@@ -16,7 +16,7 @@ namespace CommonData
             set { port = value; }
         }
 
-        private string ip;
+        private string ip = "127.0.0.1";
         public string IP
         {
 

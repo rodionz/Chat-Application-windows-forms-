@@ -14,19 +14,26 @@ namespace UserInterface
 {
     public partial class Form1 : Form
     {
+
+        Server servak = new Server();
+
+
+
         public Form1()
         {
             InitializeComponent();
         }
 
 
-        SignIn sign = new SignIn();
-    
+        SignIn signinForm = new SignIn();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            sign.ShowDialog();
+            signinForm.ShowDialog();
         }
+
+
+
 
         private void ColorChoosing_Click(object sender, EventArgs e)
         {
@@ -40,5 +47,7 @@ namespace UserInterface
                 this.BackColor = colorDialog1.Color;
             }
         }
+
+     
     }
 }

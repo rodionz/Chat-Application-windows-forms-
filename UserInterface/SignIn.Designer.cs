@@ -84,6 +84,7 @@
             this.NicknameConfirmationButton.TabIndex = 5;
             this.NicknameConfirmationButton.Text = "Confirm";
             this.NicknameConfirmationButton.UseVisualStyleBackColor = true;
+            this.NicknameConfirmationButton.Click += new System.EventHandler(this.NicknameConfirmationButton_Click);
             // 
             // IPmaskedTextBox
             // 

@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{78A7B9F4-393B-4AE6-82F7-A36F491F0885}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpServer", "TCP-Server\TcpServer.csproj", "{AC0C89D0-91F4-4FB4-B4B6-D79E404574F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tcp_Server", "TCP-Server\Tcp_Server.csproj", "{AC0C89D0-91F4-4FB4-B4B6-D79E404574F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClient", "TCP-Client\TcpClient.csproj", "{F65092A3-81AF-4354-8546-1B82378D78D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tcp_Client", "TCP-Client\Tcp_Client.csproj", "{F65092A3-81AF-4354-8546-1B82378D78D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerData", "ServerData\ServerData.csproj", "{4F28D584-0FC9-4855-8E9A-A8539682C418}"
 EndProject

@@ -59,6 +59,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.addclient2button = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,8 +90,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -147,7 +147,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Aqua;
             this.panel3.Controls.Add(this.toolStrip1);
-            this.panel3.Location = new System.Drawing.Point(598, 271);
+            this.panel3.Location = new System.Drawing.Point(966, 294);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(278, 180);
             this.panel3.TabIndex = 2;
@@ -343,6 +343,26 @@
             this.addclient2button.Text = "ADD NEW CLIENT";
             this.addclient2button.UseVisualStyleBackColor = true;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.tabPage6.Controls.Add(this.button1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1252, 551);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "AddClinet";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(490, 219);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(233, 74);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ADD NEW CLIENT";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
@@ -518,26 +538,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.tabPage6.Controls.Add(this.button1);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1252, 551);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "AddClinet";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(490, 219);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 74);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ADD NEW CLIENT";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,66 +573,69 @@
 
         #endregion
 
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Diagnostics.EventLog eventLog1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button addclient2button;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button sendmessageButton;
-        private System.DirectoryServices.DirectoryEntry directoryEntry1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button ColorChoosing;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button1;
+
+       
+
+        public System.Windows.Forms.ColorDialog colorDialog1;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Diagnostics.EventLog eventLog1;
+        public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TabPage tabPage2;
+        public System.Windows.Forms.TabPage tabPage3;
+        public System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.FontDialog fontDialog1;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Button addclient2button;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TabControl tabControl2;
+        public System.Windows.Forms.TabPage tabPage4;
+        public System.Windows.Forms.TabPage tabPage5;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.Button sendmessageButton;
+        public System.DirectoryServices.DirectoryEntry directoryEntry1;
+        public System.Windows.Forms.ToolStrip toolStrip1;
+        public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        public System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        public System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        public System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        public System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.ImageList imageList1;
+        public System.Windows.Forms.ToolTip toolTip2;
+        public System.Windows.Forms.Button ColorChoosing;
+        public System.Windows.Forms.TabPage tabPage6;
+        public System.Windows.Forms.Button button1;
     }
 }
 

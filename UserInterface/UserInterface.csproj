@@ -97,6 +97,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonData\CommonData.csproj">
+      <Project>{bbdbfda6-8396-4e09-8672-c30e78be9eb8}</Project>
+      <Name>CommonData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServerData\ServerData.csproj">
       <Project>{4f28d584-0fc9-4855-8e9a-a8539682c418}</Project>
       <Name>ServerData</Name>

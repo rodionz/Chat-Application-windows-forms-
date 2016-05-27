@@ -9,8 +9,8 @@ using System.Net.Sockets;
 using ServerData;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
-using CommonData;
 
+using UserInterface;
 
 namespace TCP_Server
 {
@@ -19,6 +19,11 @@ namespace TCP_Server
         static void Main(string[] args)
         {
             Server server = new Server();
+            Form1 mainform = new Form1();
+            SignIn sign = new SignIn();
+
+           
+            
 
             TcpListener listener1 = new TcpListener(IPAddress.Parse(server.IP), server.Port);
         

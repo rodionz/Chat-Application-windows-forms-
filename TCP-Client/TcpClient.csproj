@@ -58,6 +58,10 @@
       <Project>{b8517983-e803-41aa-a439-7c3766b402a6}</Project>
       <Name>UserData</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserInterface\UserInterface.csproj">
+      <Project>{78a7b9f4-393b-4ae6-82f7-a36f491f0885}</Project>
+      <Name>UserInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

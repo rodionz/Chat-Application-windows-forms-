@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using UserData;
+using ServerData;
 
 
 
@@ -57,7 +59,7 @@ namespace UserInterface
 
             if (b == true)
             {
-                //if (clientIpAddr == serv )
+                //if (clientIpAddr == server.)
 
 
 
@@ -65,8 +67,12 @@ namespace UserInterface
 
         }
 
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            User user1 = new User();
+            TcpClient client1 = new TcpClient();
 
-
-
+            
+        }
     }
 }

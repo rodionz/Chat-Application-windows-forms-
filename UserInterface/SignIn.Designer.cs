@@ -39,6 +39,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.IPConfirmed = new System.Windows.Forms.Label();
             this.UserNameConfirmed = new System.Windows.Forms.Label();
+            this.ConnectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +75,6 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
-     
             // 
             // NicknameConfirmationButton
             // 
@@ -126,11 +126,22 @@
             this.UserNameConfirmed.TabIndex = 8;
             this.UserNameConfirmed.Text = "   V   ";
             // 
+            // ConnectButton
+            // 
+            this.ConnectButton.Location = new System.Drawing.Point(187, 178);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(153, 32);
+            this.ConnectButton.TabIndex = 9;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 248);
+            this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.UserNameConfirmed);
             this.Controls.Add(this.IPConfirmed);
             this.Controls.Add(this.IPmaskedTextBox);
@@ -142,7 +153,6 @@
             this.Name = "SignIn";
             this.Text = "SignIn";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignIn_FormClosing);
-          
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,15 +160,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox UserNameBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button NicknameConfirmationButton;
-        private System.Windows.Forms.MaskedTextBox IPmaskedTextBox;
-        private System.Diagnostics.Process process1;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label UserNameConfirmed;
-        private System.Windows.Forms.Label IPConfirmed;
+        public System.Windows.Forms.Label label1;
+       public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox UserNameBox;
+        public System.Windows.Forms.Button button1;
+       public System.Windows.Forms.Button NicknameConfirmationButton;
+        public System.Windows.Forms.MaskedTextBox IPmaskedTextBox;
+        public System.Diagnostics.Process process1;
+        public System.Windows.Forms.ToolTip toolTip1;
+       public System.Windows.Forms.Label UserNameConfirmed;
+        public System.Windows.Forms.Label IPConfirmed;
+        public System.Windows.Forms.Button ConnectButton;
     }
 }

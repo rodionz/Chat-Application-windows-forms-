@@ -9,7 +9,10 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using UserData;
-using CommonData;
+
+using UserInterface;
+
+
 
 namespace TCP_Client
 {

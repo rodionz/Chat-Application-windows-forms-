@@ -23,21 +23,34 @@ namespace UserInterface
     {
         public Server server1;
 
+    
+
+        
+      
+
+        
+
+       
+
+
+
         public SignIn()
         {
             server1 = new Server();
             InitializeComponent();
         }
 
-       
-       
+      
+
+        
+
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Validators_GlobalBooleans.SignInisValid == false)
             {
-                
-                //e.Cancel = true;
+
+                e.Cancel = true;
             }
         }
 
@@ -93,5 +106,14 @@ namespace UserInterface
 
         }
 
+        private void SignIn_Load(object sender, EventArgs e)
+
+
+        {
+
+            List<User> listofUsers= new List<User>();
+            
+
+        }
     }
 }

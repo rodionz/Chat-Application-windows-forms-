@@ -16,16 +16,20 @@ namespace UserInterface
     {
 
         Server servak = new Server();
-
-
+        User localuser = new User();
+        //ClientInterface.Text = new_user;
+        SignIn signinForm = new SignIn();
 
         public Form1()
         {
+
+
+
             InitializeComponent();
         }
 
 
-        SignIn signinForm = new SignIn();
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -37,17 +41,30 @@ namespace UserInterface
 
         private void ColorChoosing_Click(object sender, EventArgs e)
         {
+
             colorDialog1.AllowFullOpen = true;
             colorDialog1.AnyColor = true;
             DialogResult result = colorDialog1.ShowDialog();
-           
+
             if (result == DialogResult.OK)
             {
-                
-                this.BackColor = colorDialog1.Color;
+
+                this.TextMessages.ForeColor = colorDialog1.Color;
             }
         }
 
-     
+
+
+        private void ClientInterface_Enter(object sender, EventArgs e)
+        {
+            if (signinForm.new_user != null)
+            {
+                localuser = signinForm.new_user;
+                ClientInterface.Text = localuser.Nickname;
+
+            }
+        }
+
+
     }
 }

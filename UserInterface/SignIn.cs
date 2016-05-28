@@ -29,7 +29,7 @@ namespace UserInterface
 
         List<string> listofUsername = new List<string>();
 
-        User newuser;
+        internal User new_user;
 
 
 
@@ -90,7 +90,7 @@ namespace UserInterface
 
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                newuser = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                new_user = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
                 Close();

@@ -49,11 +49,11 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ClientInterface = new System.Windows.Forms.TabPage();
             this.ColorChoosing = new System.Windows.Forms.Button();
             this.sendmessageButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TextMessages = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -97,7 +97,7 @@
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.ClientInterface.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -119,7 +119,7 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.ClientInterface);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
@@ -247,20 +247,21 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
-            // tabPage2
+            // ClientInterface
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Peru;
-            this.tabPage2.Controls.Add(this.ColorChoosing);
-            this.tabPage2.Controls.Add(this.sendmessageButton);
-            this.tabPage2.Controls.Add(this.panel6);
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1252, 551);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "ClientSide";
+            this.ClientInterface.BackColor = System.Drawing.Color.Peru;
+            this.ClientInterface.Controls.Add(this.ColorChoosing);
+            this.ClientInterface.Controls.Add(this.sendmessageButton);
+            this.ClientInterface.Controls.Add(this.panel6);
+            this.ClientInterface.Controls.Add(this.panel5);
+            this.ClientInterface.Controls.Add(this.panel4);
+            this.ClientInterface.Location = new System.Drawing.Point(4, 22);
+            this.ClientInterface.Name = "ClientInterface";
+            this.ClientInterface.Padding = new System.Windows.Forms.Padding(3);
+            this.ClientInterface.Size = new System.Drawing.Size(1252, 551);
+            this.ClientInterface.TabIndex = 1;
+            this.ClientInterface.Text = "ClientSide";
+            this.ClientInterface.Enter += new System.EventHandler(this.ClientInterface_Enter);
             // 
             // ColorChoosing
             // 
@@ -284,23 +285,24 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Gold;
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.TextMessages);
             this.panel6.Location = new System.Drawing.Point(386, 302);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(341, 67);
             this.panel6.TabIndex = 2;
             // 
-            // textBox2
+            // TextMessages
             // 
-            this.textBox2.Location = new System.Drawing.Point(23, 13);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 39);
-            this.textBox2.TabIndex = 0;
+            this.TextMessages.ForeColor = System.Drawing.Color.Yellow;
+            this.TextMessages.Location = new System.Drawing.Point(23, 13);
+            this.TextMessages.Multiline = true;
+            this.TextMessages.Name = "TextMessages";
+            this.TextMessages.Size = new System.Drawing.Size(283, 39);
+            this.TextMessages.TabIndex = 0;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.LightCoral;
+            this.panel5.BackColor = System.Drawing.Color.SteelBlue;
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Location = new System.Drawing.Point(386, 49);
             this.panel5.Name = "panel5";
@@ -559,7 +561,7 @@
             this.tabControl2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.ClientInterface.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -584,7 +586,7 @@
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TabPage tabPage2;
+        public System.Windows.Forms.TabPage ClientInterface;
         public System.Windows.Forms.TabPage tabPage3;
         public System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.FontDialog fontDialog1;
@@ -592,7 +594,7 @@
         public System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Button addclient2button;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox TextMessages;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TabControl tabControl2;
         public System.Windows.Forms.TabPage tabPage4;

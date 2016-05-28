@@ -90,6 +90,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.changeFontButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -249,7 +250,8 @@
             // 
             // ClientInterface
             // 
-            this.ClientInterface.BackColor = System.Drawing.Color.Peru;
+            this.ClientInterface.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientInterface.Controls.Add(this.changeFontButton);
             this.ClientInterface.Controls.Add(this.ColorChoosing);
             this.ClientInterface.Controls.Add(this.sendmessageButton);
             this.ClientInterface.Controls.Add(this.panel6);
@@ -284,7 +286,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Gold;
+            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel6.Controls.Add(this.TextMessages);
             this.panel6.Location = new System.Drawing.Point(386, 302);
             this.panel6.Name = "panel6";
@@ -293,7 +295,7 @@
             // 
             // TextMessages
             // 
-            this.TextMessages.ForeColor = System.Drawing.Color.Yellow;
+            this.TextMessages.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TextMessages.Location = new System.Drawing.Point(23, 13);
             this.TextMessages.Multiline = true;
             this.TextMessages.Name = "TextMessages";
@@ -302,7 +304,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Location = new System.Drawing.Point(386, 49);
             this.panel5.Name = "panel5";
@@ -540,6 +542,16 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // changeFontButton
+            // 
+            this.changeFontButton.Location = new System.Drawing.Point(399, 458);
+            this.changeFontButton.Name = "changeFontButton";
+            this.changeFontButton.Size = new System.Drawing.Size(109, 36);
+            this.changeFontButton.TabIndex = 5;
+            this.changeFontButton.Text = "Change Font";
+            this.changeFontButton.UseVisualStyleBackColor = true;
+            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,6 +650,7 @@
         public System.Windows.Forms.Button ColorChoosing;
         public System.Windows.Forms.TabPage tabPage6;
         public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changeFontButton;
     }
 }
 

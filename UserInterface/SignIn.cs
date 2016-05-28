@@ -29,6 +29,8 @@ namespace UserInterface
 
         List<string> listofUsername = new List<string>();
 
+        User newuser;
+
 
 
 
@@ -48,7 +50,7 @@ namespace UserInterface
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (GlobalBoolean.SignInisValid == false)
+            if (GlobalBoolean.UserIsValid == false)
             {
 
                 e.Cancel = true;
@@ -67,14 +69,14 @@ namespace UserInterface
 
             if (!a)
             {
-                NickNameConfirmationLabel.ForeColor = Color.DarkGreen;
+                NickNameConfirmationLabel.ForeColor = Color.Green;
                 NickNameConfirmationLabel.Text = "UserName confirmed";
                 GlobalBoolean.NicnameConfirmed = true;
             }
 
             else
             {
-                NickNameConfirmationLabel.ForeColor = Color.DarkRed;
+                NickNameConfirmationLabel.ForeColor = Color.Red;
                 NickNameConfirmationLabel.Text = "UserName already take, please choose another one";
 
 
@@ -86,10 +88,12 @@ namespace UserInterface
         {
 
 
-            if (GlobalBoolean.IPconfirmed == true && GlobalBoolean.NicnameConfirmed == true)
+            if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                User user1 = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                newuser = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
                 TcpClient client1 = new TcpClient();
+                GlobalBoolean.UserIsValid = true;
+                Close();
             }
 
         }
@@ -128,14 +132,14 @@ namespace UserInterface
             {
                 if (clientIpAddr.ToString() == server1.IP)
                 {
-                    IPconfirmationLabel.ForeColor = Color.DarkGreen;
+                    IPconfirmationLabel.ForeColor = Color.Green;
                     IPconfirmationLabel.Text = "IP Confimed";
                     GlobalBoolean.IPconfirmed = true;
                 }
 
                 else
                 {
-                    IPconfirmationLabel.ForeColor = Color.DarkRed;
+                    IPconfirmationLabel.ForeColor = Color.Red;
                     IPconfirmationLabel.Text = "IP Denied, please try another one";
 
                 }
@@ -148,7 +152,9 @@ namespace UserInterface
         {
             if (server1.Port == int.Parse(maskedTextBox1.Text))
             {
-
+                portConfirmationLabel.ForeColor = Color.Green;
+                portConfirmationLabel.Text = "Port Confirmed";
+                GlobalBoolean.PORTconfirmed = true;
 
             }
 
@@ -156,7 +162,8 @@ namespace UserInterface
             else
 
             {
-
+                portConfirmationLabel.ForeColor = Color.Red;
+                portConfirmationLabel.Text = "Port Denied, pleasetry again.";
 
 
             }

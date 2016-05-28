@@ -17,7 +17,7 @@ namespace UserInterface
     class GlobalBoolean
     {
        
-          internal static bool SignInisValid = false;
+          internal static bool UserIsValid = false;
 
           internal static bool NicnameConfirmed = false;
 

@@ -69,7 +69,7 @@ namespace UserInterface
 
             if (!a)
             {
-                NickNameConfirmationLabel.ForeColor = Color.Green;
+                NickNameConfirmationLabel.ForeColor = Color.Lime;
                 NickNameConfirmationLabel.Text = "UserName confirmed";
                 GlobalBoolean.NicnameConfirmed = true;
             }
@@ -132,7 +132,7 @@ namespace UserInterface
             {
                 if (clientIpAddr.ToString() == server1.IP)
                 {
-                    IPconfirmationLabel.ForeColor = Color.Green;
+                    IPconfirmationLabel.ForeColor = Color.Lime;
                     IPconfirmationLabel.Text = "IP Confimed";
                     GlobalBoolean.IPconfirmed = true;
                 }
@@ -150,9 +150,9 @@ namespace UserInterface
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            if (server1.Port == int.Parse(maskedTextBox1.Text))
+            if (server1.Port == int.Parse(portTextBox.Text))
             {
-                portConfirmationLabel.ForeColor = Color.Green;
+                portConfirmationLabel.ForeColor = Color.Lime;
                 portConfirmationLabel.Text = "Port Confirmed";
                 GlobalBoolean.PORTconfirmed = true;
 
@@ -169,6 +169,21 @@ namespace UserInterface
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IPmaskedTextBox.Clear();
+        }
+
+        private void UsernameClearButton_Click(object sender, EventArgs e)
+        {
+            UserNameBox.Clear();
+        }
+
+        private void Clearportbutton_Click(object sender, EventArgs e)
+        {
+            portTextBox.Clear();
         }
     }
     }

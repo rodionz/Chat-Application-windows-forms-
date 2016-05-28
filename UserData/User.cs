@@ -18,6 +18,7 @@ namespace UserData
       public string Nickname
         { get; set; }
 
-
+        public byte UserID
+        { get; set; }
     }
 }

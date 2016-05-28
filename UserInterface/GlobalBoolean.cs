@@ -16,15 +16,56 @@ namespace UserInterface
 {
     class GlobalBoolean
     {
-       
-          internal static bool UserIsValid = false;
+        private static bool uservailid = false;
+          internal static bool UserIsValid
+        {
+            get { return uservailid; }
 
-          internal static bool NicnameConfirmed = false;
+            set { uservailid = value; }
 
-        internal static bool IPconfirmed = false;
 
-        internal static bool PORTconfirmed = false;
-      
-            
+        }
+
+
+        private static bool nicknameconfirmed = false;
+          internal static bool NicnameConfirmed
+        {
+            get { return nicknameconfirmed; }
+
+            set { nicknameconfirmed = value; }
+        }
+
+
+        internal static bool ipconfirmed = false;
+        internal static bool IPconfirmed
+        {
+            get { return ipconfirmed; }
+
+            set { ipconfirmed = value; }
+        }
+
+
+
+        internal static bool portconfirmed = false;
+        internal static bool PORTconfirmed
+        {
+            get { return portconfirmed; }
+            set { portconfirmed = value; }
+
+        }
+
+
+        public static void RestBooleans()
+
+        {
+
+            uservailid = false;
+            nicknameconfirmed = false;
+            ipconfirmed = false;
+            portconfirmed = false;
+
+        }
+
+
     }
 }

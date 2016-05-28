@@ -55,6 +55,9 @@ namespace UserInterface
 
                 e.Cancel = true;
             }
+
+            GlobalBoolean.RestBooleans();
+
         }
 
       

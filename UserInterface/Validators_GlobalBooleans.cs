@@ -19,6 +19,10 @@ namespace UserInterface
        
           internal static bool SignInisValid = false;
 
+          internal static bool NicnameConfirmed = false;
+
+        internal static bool IPconfirmed = false;
+
          
       
             

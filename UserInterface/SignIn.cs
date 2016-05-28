@@ -23,14 +23,15 @@ namespace UserInterface
     {
         public Server server1;
 
-    
+        List<User> listofUsers;
 
-        
-      
+        IPAddress clientIpAddr;
 
-        
 
-       
+
+
+
+
 
 
 
@@ -54,12 +55,60 @@ namespace UserInterface
             }
         }
 
-        private void IPmaskedTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            this.IPmaskedTextBox.ValidatingType = typeof(IPAddress);
-            IPAddress clientIpAddr;
+      
 
-            char[] delimit = {' '};
+       
+
+        private void NicknameConfirmationButton_Click(object sender, EventArgs e)
+        {
+            var uniq = listofUsers.Where(usr => usr.Nickname == this.UserNameBox.Text).Count();
+
+            if (uniq == 0)
+            {
+                NickNameConfirmationLabel.ForeColor = Color.DarkGreen;
+                NickNameConfirmationLabel.Text = "UserName confirmed";
+                Validators_GlobalBooleans.NicnameConfirmed = true;
+            }
+
+            else
+            {
+                NickNameConfirmationLabel.ForeColor = Color.DarkRed;
+                NickNameConfirmationLabel.Text = "UserName already take, please choose another one";
+
+
+            }
+        }
+
+
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+
+
+            if (Validators_GlobalBooleans.IPconfirmed == true && Validators_GlobalBooleans.NicnameConfirmed == true)
+            {
+                User user1 = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                TcpClient client1 = new TcpClient();
+            }
+
+        }
+
+        private void SignIn_Load(object sender, EventArgs e)
+
+
+        {
+
+            List<User> listofUsers= new List<User>();
+            
+
+        }
+
+        private void ConfirmIP_Click(object sender, EventArgs e)
+        {
+
+            this.IPmaskedTextBox.ValidatingType = typeof(IPAddress);
+            
+
+            char[] delimit = { ' ' };
             string[] str = IPmaskedTextBox.Text.Split();
             string separator = "";
 
@@ -76,12 +125,15 @@ namespace UserInterface
             {
                 if (clientIpAddr.ToString() == server1.IP)
                 {
-
+                    IPconfirmationLabel.ForeColor = Color.DarkGreen;
+                    IPconfirmationLabel.Text = "IP Confimed";
+                    Validators_GlobalBooleans.IPconfirmed = true;
                 }
 
                 else
                 {
-
+                    IPconfirmationLabel.ForeColor = Color.DarkRed;
+                    IPconfirmationLabel.Text = "IP Denied, please try another one";
 
                 }
 
@@ -89,31 +141,10 @@ namespace UserInterface
 
         }
 
-       
-
-        private void NicknameConfirmationButton_Click(object sender, EventArgs e)
-        {
-          
-
-        }
 
 
-        private void ConnectButton_Click(object sender, EventArgs e)
-        {
-            User user1 = new User();
-            TcpClient client1 = new TcpClient();
 
 
-        }
-
-        private void SignIn_Load(object sender, EventArgs e)
-
-
-        {
-
-            List<User> listofUsers= new List<User>();
-            
-
-        }
     }
-}
+    }
+

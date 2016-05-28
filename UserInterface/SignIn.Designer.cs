@@ -140,9 +140,11 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(197, 134);
+            this.maskedTextBox1.Mask = "00000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(127, 20);
             this.maskedTextBox1.TabIndex = 12;
+            this.maskedTextBox1.ValidatingType = typeof(int);
             // 
             // label3
             // 
@@ -161,6 +163,7 @@
             this.PortConfirmationButtom.TabIndex = 14;
             this.PortConfirmationButtom.Text = "Confirm port";
             this.PortConfirmationButtom.UseVisualStyleBackColor = true;
+            this.PortConfirmationButtom.Click += new System.EventHandler(this.PortConfirmationButtom_Click);
             // 
             // portConfirmationLabel
             // 

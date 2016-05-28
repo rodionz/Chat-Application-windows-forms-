@@ -23,11 +23,11 @@ namespace UserInterface
     {
         public Server server1;
 
-        List<User> listofUsers;
+        List<User> listofUsers = new List<User>();
 
         IPAddress clientIpAddr;
 
-
+        List<string> listofUsername = new List<string>();
 
 
 
@@ -48,7 +48,7 @@ namespace UserInterface
 
         private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Validators_GlobalBooleans.SignInisValid == false)
+            if (GlobalBoolean.SignInisValid == false)
             {
 
                 e.Cancel = true;
@@ -61,13 +61,15 @@ namespace UserInterface
 
         private void NicknameConfirmationButton_Click(object sender, EventArgs e)
         {
-            var uniq = listofUsers.Where(usr => usr.Nickname == this.UserNameBox.Text).Count();
+            //var uniq = listofUsers.Where(usr => usr.Nickname == this.UserNameBox.Text).Count();
 
-            if (uniq == 0)
+            bool a = listofUsername.Contains(UserNameBox.Text);
+
+            if (!a)
             {
                 NickNameConfirmationLabel.ForeColor = Color.DarkGreen;
                 NickNameConfirmationLabel.Text = "UserName confirmed";
-                Validators_GlobalBooleans.NicnameConfirmed = true;
+                GlobalBoolean.NicnameConfirmed = true;
             }
 
             else
@@ -84,7 +86,7 @@ namespace UserInterface
         {
 
 
-            if (Validators_GlobalBooleans.IPconfirmed == true && Validators_GlobalBooleans.NicnameConfirmed == true)
+            if (GlobalBoolean.IPconfirmed == true && GlobalBoolean.NicnameConfirmed == true)
             {
                 User user1 = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
                 TcpClient client1 = new TcpClient();
@@ -97,7 +99,8 @@ namespace UserInterface
 
         {
 
-            List<User> listofUsers= new List<User>();
+
+            listofUsername.Add(" ");
             
 
         }
@@ -127,7 +130,7 @@ namespace UserInterface
                 {
                     IPconfirmationLabel.ForeColor = Color.DarkGreen;
                     IPconfirmationLabel.Text = "IP Confimed";
-                    Validators_GlobalBooleans.IPconfirmed = true;
+                    GlobalBoolean.IPconfirmed = true;
                 }
 
                 else
@@ -141,10 +144,25 @@ namespace UserInterface
 
         }
 
+        private void PortConfirmationButtom_Click(object sender, EventArgs e)
+        {
+            if (server1.Port == int.Parse(maskedTextBox1.Text))
+            {
+
+
+            }
+
+
+            else
+
+            {
 
 
 
+            }
 
+
+        }
     }
     }
 

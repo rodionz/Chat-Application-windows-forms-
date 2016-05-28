@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace UserInterface
 {
-    class Validators_GlobalBooleans
+    class GlobalBoolean
     {
        
           internal static bool SignInisValid = false;
@@ -23,7 +23,7 @@ namespace UserInterface
 
         internal static bool IPconfirmed = false;
 
-         
+        internal static bool PORTconfirmed = false;
       
             
     }

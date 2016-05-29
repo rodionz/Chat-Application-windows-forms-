@@ -30,12 +30,12 @@ namespace UserInterface
         }
 
 
+        
 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            signinForm.ShowDialog();
-        }
+        //private void Form1_Load(object sender, EventArgs e)
+        //{
+        //    signinForm.ShowDialog();
+        //}
 
 
 
@@ -85,7 +85,12 @@ namespace UserInterface
 
         private void addclient2button_Click(object sender, EventArgs e)
         {
-
+            MyuserControl control = new MyuserControl();
+            control.CreateControl();
+            control.CreateGraphics();
+            control.Show();
+            //control.Select();
+            
         }
     }
 }

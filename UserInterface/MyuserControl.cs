@@ -1,34 +1,97 @@
-﻿namespace UserInterface
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using UserData;
+using ServerData;
+
+
+
+
+
+namespace UserInterface
 {
-    partial class Form1
+    public partial class MyuserControl : UserControl
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        SignIn signinForm = new SignIn();
+        User localuser = new User();
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        public System.Windows.Forms.ColorDialog colorDialog1;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Diagnostics.EventLog eventLog1;
+        public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TabPage ClientInterface;
+        public System.Windows.Forms.TabPage tabPage3;
+        public System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.FontDialog fontDialog1;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Button addclient2button;
+        public System.Windows.Forms.TextBox TextMessages;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TabControl tabControl2;
+        public System.Windows.Forms.TabPage tabPage4;
+        public System.Windows.Forms.TabPage tabPage5;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.Button sendmessageButton;
+        public System.DirectoryServices.DirectoryEntry directoryEntry1;
+        public System.Windows.Forms.ToolStrip toolStrip1;
+        public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        public System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        public System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        public System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        public System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.ImageList imageList1;
+        public System.Windows.Forms.ToolTip toolTip2;
+        public System.Windows.Forms.Button ColorChoosing;
+        public System.Windows.Forms.TabPage tabPage6;
+        public System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button changeFontButton;
+
+
+
+
+
+
+        public MyuserControl()
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
+            InitializeComponent();
+                 this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -560,10 +623,10 @@
             this.ClientSize = new System.Drawing.Size(1260, 604);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+         
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
+        
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -586,72 +649,66 @@
 
         }
 
-        #endregion
 
 
-       
+      
 
-        public System.Windows.Forms.ColorDialog colorDialog1;
-        public System.ComponentModel.BackgroundWorker backgroundWorker1;
-        public System.Diagnostics.EventLog eventLog1;
-        public System.Windows.Forms.TabControl tabControl1;
-        public System.Windows.Forms.TabPage tabPage1;
-        public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TabPage ClientInterface;
-        public System.Windows.Forms.TabPage tabPage3;
-        public System.Windows.Forms.StatusStrip statusStrip1;
-        public System.Windows.Forms.FontDialog fontDialog1;
-        public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Button addclient2button;
-        public System.Windows.Forms.TextBox TextMessages;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TabControl tabControl2;
-        public System.Windows.Forms.TabPage tabPage4;
-        public System.Windows.Forms.TabPage tabPage5;
-        public System.Windows.Forms.MenuStrip menuStrip1;
-        public System.Windows.Forms.Button sendmessageButton;
-        public System.DirectoryServices.DirectoryEntry directoryEntry1;
-        public System.Windows.Forms.ToolStrip toolStrip1;
-        public System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        public System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        public System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        public System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        public System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        public System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        public System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        public System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        public System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.ImageList imageList1;
-        public System.Windows.Forms.ToolTip toolTip2;
-        public System.Windows.Forms.Button ColorChoosing;
-        public System.Windows.Forms.TabPage tabPage6;
-        public System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button changeFontButton;
+
+
+
+        private void ColorChoosing_Click(object sender, EventArgs e)
+        {
+
+            colorDialog1.AllowFullOpen = true;
+            colorDialog1.AnyColor = true;
+            DialogResult result = colorDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+
+                this.TextMessages.ForeColor = colorDialog1.Color;
+            }
+        }
+
+
+
+        private void ClientInterface_Enter(object sender, EventArgs e)
+        {
+            if (signinForm.new_user != null)
+            {
+                localuser = signinForm.new_user;
+                ClientInterface.Text = localuser.Nickname;
+
+            }
+        }
+
+        private void changeFontButton_Click(object sender, EventArgs e)
+        {
+
+
+            fontDialog1.AllowScriptChange = true;
+            fontDialog1.AllowSimulations = true;
+            fontDialog1.ShowEffects = true;
+
+            DialogResult result = fontDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.TextMessages.Font = fontDialog1.Font;
+
+            }
+        }
+
+        private void addclient2button_Click(object sender, EventArgs e)
+        {
+            MyuserControl control = new MyuserControl();
+
+        }
+
+        private void MyuserControl_Load(object sender, EventArgs e)
+        {
+            signinForm.ShowDialog();
+        }
     }
-}
+    }
 

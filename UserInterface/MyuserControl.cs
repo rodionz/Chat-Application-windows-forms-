@@ -15,6 +15,14 @@ namespace UserInterface
     public partial class MyuserControl : UserControl
     {
 
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        [Bindable(true)]
+        public override string Text { get; set; }
+
+
+
         public event EventHandler<MessageArgs> SendMessage;
 
         MessageArgs MA = new MessageArgs();
@@ -22,6 +30,8 @@ namespace UserInterface
         SignIn signinForm = new SignIn();
 
         Server servak = new Server();
+
+        User localUser;
        
 
         public MyuserControl()
@@ -61,8 +71,10 @@ namespace UserInterface
         private void MyuserControl_Load(object sender, EventArgs e)
         {
             signinForm.ShowDialog();
-            User localuser = Form1.ListOfUsers.LastOrDefault();
-            this.label1.Text = localuser.Nickname;
+             localUser = Form1.ListOfUsers.LastOrDefault();
+            this.label1.Text = localUser.Nickname;
+            this.Text = localUser.Nickname;
+            
 
         }
 
@@ -75,8 +87,9 @@ namespace UserInterface
 
         private void MyuserControl_Enter(object sender, EventArgs e)
         {
-            User localuser = new User(Form1.ListOfUsers.Count);
-            this.label1.Text = localuser.Nickname;
+            //User localuser = new User(Form1.ListOfUsers.Count);
+            //this.label1.Text = localuser.Nickname;
+            this.Text = localUser.Nickname;
         }
     }
 }

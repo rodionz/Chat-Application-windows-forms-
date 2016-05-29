@@ -17,7 +17,7 @@ namespace UserInterface
         public event EventHandler<MessageArgs> SendMessage;
 
         MessageArgs MA = new MessageArgs();
-
+       
         Server servak = new Server();
         User localuser = ListOfUsers.LastOrDefault();
         //ClientInterface.Text = new_user;
@@ -63,12 +63,12 @@ namespace UserInterface
 
         private void ClientInterface_Enter(object sender, EventArgs e)
         {
-            if (signinForm.new_user != null)
-            {
-                localuser = signinForm.new_user;
-                ClientInterface.Text = localuser.Nickname;
+            //if (signinForm.new_user != null)
+            //{
+            //    localuser = signinForm.new_user;
+            //    ClientInterface.Text = localuser.Nickname;
 
-            }
+            //}
         }
 
         private void changeFontButton_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace UserInterface
         private void button2_Click(object sender, EventArgs e)
         {
             MyuserControl control = new MyuserControl();
-            TabPage tbp = new TabPage();
+          TabPage  tbp = new TabPage();
             
             tbp.Controls.Add(control);
             

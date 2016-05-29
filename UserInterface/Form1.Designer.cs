@@ -50,6 +50,7 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClientInterface = new System.Windows.Forms.TabPage();
+            this.changeFontButton = new System.Windows.Forms.Button();
             this.ColorChoosing = new System.Windows.Forms.Button();
             this.sendmessageButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,7 +58,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Client2 = new System.Windows.Forms.TabPage();
             this.addclient2button = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -90,7 +91,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.changeFontButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -101,7 +101,7 @@
             this.ClientInterface.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.Client2.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +121,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.ClientInterface);
-            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.Client2);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
@@ -265,6 +265,16 @@
             this.ClientInterface.Text = "ClientSide";
             this.ClientInterface.Enter += new System.EventHandler(this.ClientInterface_Enter);
             // 
+            // changeFontButton
+            // 
+            this.changeFontButton.Location = new System.Drawing.Point(399, 458);
+            this.changeFontButton.Name = "changeFontButton";
+            this.changeFontButton.Size = new System.Drawing.Size(109, 36);
+            this.changeFontButton.TabIndex = 5;
+            this.changeFontButton.Text = "Change Font";
+            this.changeFontButton.UseVisualStyleBackColor = true;
+            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
+            // 
             // ColorChoosing
             // 
             this.ColorChoosing.Location = new System.Drawing.Point(399, 407);
@@ -327,16 +337,16 @@
             this.panel4.Size = new System.Drawing.Size(200, 219);
             this.panel4.TabIndex = 0;
             // 
-            // tabPage3
+            // Client2
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.tabPage3.Controls.Add(this.addclient2button);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1252, 551);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "AddClient";
+            this.Client2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Client2.Controls.Add(this.addclient2button);
+            this.Client2.Location = new System.Drawing.Point(4, 22);
+            this.Client2.Name = "Client2";
+            this.Client2.Padding = new System.Windows.Forms.Padding(3);
+            this.Client2.Size = new System.Drawing.Size(1252, 551);
+            this.Client2.TabIndex = 2;
+            this.Client2.Text = "AddClient";
             // 
             // addclient2button
             // 
@@ -543,16 +553,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // changeFontButton
-            // 
-            this.changeFontButton.Location = new System.Drawing.Point(399, 458);
-            this.changeFontButton.Name = "changeFontButton";
-            this.changeFontButton.Size = new System.Drawing.Size(109, 36);
-            this.changeFontButton.TabIndex = 5;
-            this.changeFontButton.Text = "Change Font";
-            this.changeFontButton.UseVisualStyleBackColor = true;
-            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,7 +579,7 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.Client2.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -600,7 +600,7 @@
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TabPage ClientInterface;
-        public System.Windows.Forms.TabPage tabPage3;
+        public System.Windows.Forms.TabPage Client2;
         public System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.FontDialog fontDialog1;
         public System.Windows.Forms.Panel panel6;

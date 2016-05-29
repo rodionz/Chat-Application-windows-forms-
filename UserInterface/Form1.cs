@@ -34,7 +34,7 @@ namespace UserInterface
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            signinForm.ShowDialog();
+            //signinForm.ShowDialog();
         }
 
 
@@ -85,7 +85,7 @@ namespace UserInterface
 
         private void addclient2button_Click(object sender, EventArgs e)
         {
-
+            Client2 = ClientInterface;
         }
     }
 }

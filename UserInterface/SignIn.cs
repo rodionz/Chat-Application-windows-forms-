@@ -53,17 +53,17 @@ namespace UserInterface
         
 
 
-        private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (GlobalBoolean.UserIsValid == false)
-            {
+        //private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (GlobalBoolean.UserIsValid == false)
+        //    {
 
-                e.Cancel = true;
-            }
+        //        e.Cancel = true;
+        //    }
 
-            GlobalBoolean.ResetBooleans();
+        //    GlobalBoolean.ResetBooleans();
 
-        }
+        //}
 
       
 
@@ -106,6 +106,8 @@ namespace UserInterface
                 new_user = Form1.ListOfUsers.LastOrDefault();
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
+                GlobalBoolean.ResetBooleans();
+                ClearAll();
                 Close();
             }
 
@@ -187,6 +189,13 @@ namespace UserInterface
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
+            portTextBox.Clear();
+        }
+
+        private void ClearAll()
+        {
+            IPmaskedTextBox.Clear();
+            UserNameBox.Clear();
             portTextBox.Clear();
         }
     }

@@ -12,6 +12,9 @@ namespace UserInterface
 {
     public partial class MyuserControl : UserControl
     {
+
+        SignIn signinForm = new SignIn();
+
         public MyuserControl()
         {
             InitializeComponent();
@@ -43,6 +46,11 @@ namespace UserInterface
                 this.TextMessages.Font = fontDialog1.Font;
 
             }
+        }
+
+        private void MyuserControl_Load(object sender, EventArgs e)
+        {
+            signinForm.ShowDialog();
         }
     }
 }

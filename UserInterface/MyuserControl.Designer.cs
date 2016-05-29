@@ -45,14 +45,14 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(255, 75);
+            this.panel5.Location = new System.Drawing.Point(266, 28);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(330, 235);
             this.panel5.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 15);
+            this.textBox1.Location = new System.Drawing.Point(23, 17);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(292, 202);
@@ -62,7 +62,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel6.Controls.Add(this.TextMessages);
-            this.panel6.Location = new System.Drawing.Point(255, 365);
+            this.panel6.Location = new System.Drawing.Point(266, 301);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(341, 67);
             this.panel6.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // ColorChoosing
             // 
-            this.ColorChoosing.Location = new System.Drawing.Point(255, 475);
+            this.ColorChoosing.Location = new System.Drawing.Point(266, 401);
             this.ColorChoosing.Name = "ColorChoosing";
             this.ColorChoosing.Size = new System.Drawing.Size(109, 33);
             this.ColorChoosing.TabIndex = 5;
@@ -88,7 +88,7 @@
             // 
             // changeFontButton
             // 
-            this.changeFontButton.Location = new System.Drawing.Point(255, 535);
+            this.changeFontButton.Location = new System.Drawing.Point(266, 470);
             this.changeFontButton.Name = "changeFontButton";
             this.changeFontButton.Size = new System.Drawing.Size(109, 36);
             this.changeFontButton.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             // sendmessageButton
             // 
-            this.sendmessageButton.Location = new System.Drawing.Point(679, 378);
+            this.sendmessageButton.Location = new System.Drawing.Point(663, 314);
             this.sendmessageButton.Name = "sendmessageButton";
             this.sendmessageButton.Size = new System.Drawing.Size(100, 39);
             this.sendmessageButton.TabIndex = 7;
@@ -116,7 +116,8 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "MyuserControl";
-            this.Size = new System.Drawing.Size(1048, 664);
+            this.Size = new System.Drawing.Size(1270, 664);
+            this.Load += new System.EventHandler(this.MyuserControl_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

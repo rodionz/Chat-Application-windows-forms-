@@ -75,6 +75,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,7 +89,6 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.ClientInterface.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -304,7 +304,6 @@
             this.ClientInterface.Size = new System.Drawing.Size(1252, 551);
             this.ClientInterface.TabIndex = 1;
             this.ClientInterface.Text = "ClientSide";
-            this.ClientInterface.Enter += new System.EventHandler(this.ClientInterface_Enter);
             // 
             // button1
             // 
@@ -404,6 +403,16 @@
             this.tabPage1.Size = new System.Drawing.Size(1252, 551);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Server Side";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(670, 25);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -518,16 +527,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1260, 577);
             this.tabControl1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(670, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

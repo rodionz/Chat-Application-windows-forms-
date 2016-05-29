@@ -119,9 +119,11 @@
             // 
             // MyuserControl
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sendmessageButton);
             this.Controls.Add(this.changeFontButton);
@@ -129,9 +131,8 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "MyuserControl";
-            this.Size = new System.Drawing.Size(1270, 664);
-            this.Load += new System.EventHandler(this.MyuserControl_Load);
-            this.Enter += new System.EventHandler(this.MyuserControl_Enter);
+            this.Size = new System.Drawing.Size(1266, 660);
+            
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

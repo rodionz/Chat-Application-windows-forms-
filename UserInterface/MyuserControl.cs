@@ -21,7 +21,7 @@ namespace UserInterface
         [Bindable(true)]
         public override string Text { get; set; }
 
-
+      
 
         public event EventHandler<MessageArgs> SendMessage;
 
@@ -68,15 +68,15 @@ namespace UserInterface
             }
         }
 
-        private void MyuserControl_Load(object sender, EventArgs e)
-        {
-            signinForm.ShowDialog();
-             localUser = Form1.ListOfUsers.LastOrDefault();
-            this.label1.Text = localUser.Nickname;
-            this.Text = localUser.Nickname;
+        //private void MyuserControl_Load(object sender, EventArgs e)
+        //{
+           
+        //     localUser = Form1.ListOfUsers.LastOrDefault();
+        //    this.label1.Text = localUser.Nickname;
             
+           
 
-        }
+        //}
 
         private void sendmessageButton_Click(object sender, EventArgs e)
         {
@@ -85,11 +85,6 @@ namespace UserInterface
 
         }
 
-        private void MyuserControl_Enter(object sender, EventArgs e)
-        {
-            //User localuser = new User(Form1.ListOfUsers.Count);
-            //this.label1.Text = localuser.Nickname;
-            this.Text = localUser.Nickname;
-        }
+      
     }
 }

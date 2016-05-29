@@ -29,5 +29,20 @@ namespace UserInterface
                 this.TextMessages.ForeColor = colorDialog1.Color;
             }
         }
+
+        private void changeFontButton_Click(object sender, EventArgs e)
+        {
+            fontDialog1.AllowScriptChange = true;
+            fontDialog1.AllowSimulations = true;
+            fontDialog1.ShowEffects = true;
+
+            DialogResult result = fontDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.TextMessages.Font = fontDialog1.Font;
+
+            }
+        }
     }
 }

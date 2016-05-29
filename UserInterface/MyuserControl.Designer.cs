@@ -36,6 +36,7 @@
             this.changeFontButton = new System.Windows.Forms.Button();
             this.sendmessageButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -44,14 +45,14 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(255, 102);
+            this.panel5.Location = new System.Drawing.Point(255, 75);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(330, 235);
             this.panel5.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 17);
+            this.textBox1.Location = new System.Drawing.Point(21, 15);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(292, 202);
@@ -61,7 +62,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel6.Controls.Add(this.TextMessages);
-            this.panel6.Location = new System.Drawing.Point(244, 413);
+            this.panel6.Location = new System.Drawing.Point(255, 365);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(341, 67);
             this.panel6.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // ColorChoosing
             // 
-            this.ColorChoosing.Location = new System.Drawing.Point(228, 511);
+            this.ColorChoosing.Location = new System.Drawing.Point(255, 475);
             this.ColorChoosing.Name = "ColorChoosing";
             this.ColorChoosing.Size = new System.Drawing.Size(109, 33);
             this.ColorChoosing.TabIndex = 5;
@@ -87,16 +88,17 @@
             // 
             // changeFontButton
             // 
-            this.changeFontButton.Location = new System.Drawing.Point(228, 575);
+            this.changeFontButton.Location = new System.Drawing.Point(255, 535);
             this.changeFontButton.Name = "changeFontButton";
             this.changeFontButton.Size = new System.Drawing.Size(109, 36);
             this.changeFontButton.TabIndex = 6;
             this.changeFontButton.Text = "Change Font";
             this.changeFontButton.UseVisualStyleBackColor = true;
+            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
             // 
             // sendmessageButton
             // 
-            this.sendmessageButton.Location = new System.Drawing.Point(690, 441);
+            this.sendmessageButton.Location = new System.Drawing.Point(679, 378);
             this.sendmessageButton.Name = "sendmessageButton";
             this.sendmessageButton.Size = new System.Drawing.Size(100, 39);
             this.sendmessageButton.TabIndex = 7;
@@ -133,5 +135,6 @@
         private System.Windows.Forms.Button changeFontButton;
         public System.Windows.Forms.Button sendmessageButton;
         public System.Windows.Forms.ColorDialog colorDialog1;
+        public System.Windows.Forms.FontDialog fontDialog1;
     }
 }

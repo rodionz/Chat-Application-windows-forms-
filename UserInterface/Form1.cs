@@ -89,8 +89,8 @@ namespace UserInterface
             control.CreateControl();
             control.CreateGraphics();
             control.Show();
-            //control.Select();
-            
+            control.Select();
+
         }
     }
 }

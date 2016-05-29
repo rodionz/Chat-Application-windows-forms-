@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserData;
+using ServerData;
 
 namespace UserInterface
 {
@@ -19,9 +21,13 @@ namespace UserInterface
 
         SignIn signinForm = new SignIn();
 
+        Server servak = new Server();
+        User localuser = new User(Form1.ListOfUsers.Count);
+
         public MyuserControl()
         {
             InitializeComponent();
+            
         }
 
         private void ColorChoosing_Click(object sender, EventArgs e)
@@ -55,12 +61,18 @@ namespace UserInterface
         private void MyuserControl_Load(object sender, EventArgs e)
         {
             signinForm.ShowDialog();
+            this.label1.Text = localuser.Nickname;
         }
 
         private void sendmessageButton_Click(object sender, EventArgs e)
         {
             MA.MessageText = TextMessages.Text;
             SendMessage(this, MA);
+
         }
+
+
+       
+
     }
 }

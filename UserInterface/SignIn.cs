@@ -27,11 +27,16 @@ namespace UserInterface
 
         IPAddress clientIpAddr;
 
-        List<string> listofUsername = new List<string>();
+        internal User new_user = Form1.ListOfUsers.FirstOrDefault();
 
-      
+        
 
-    
+
+
+
+
+
+
 
 
 
@@ -66,9 +71,13 @@ namespace UserInterface
 
         private void NicknameConfirmationButton_Click(object sender, EventArgs e)
         {
-            //var uniq = listofUsers.Where(usr => usr.Nickname == this.UserNameBox.Text).Count();
+            
 
-            bool a = listofUsername.Contains(UserNameBox.Text);
+            var listofnames = from n in Form1.ListOfUsers
+                              select (n.Nickname);
+
+
+            bool a = listofnames.Contains(UserNameBox.Text);
 
             if (!a)
             {
@@ -93,7 +102,7 @@ namespace UserInterface
 
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                //new_user = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                new_user = new User(Form1.ListOfUsers.Count) { Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
                 Close();
@@ -108,7 +117,7 @@ namespace UserInterface
             
             Form1.ListOfUsers.Add(new User(Form1.ListOfUsers.Count));
 
-            listofUsername.Add(" ");
+          
             
 
         }

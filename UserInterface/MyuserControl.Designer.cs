@@ -37,6 +37,7 @@
             this.sendmessageButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -106,11 +107,22 @@
             this.sendmessageButton.UseVisualStyleBackColor = true;
             this.sendmessageButton.Click += new System.EventHandler(this.sendmessageButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // MyuserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.sendmessageButton);
             this.Controls.Add(this.changeFontButton);
             this.Controls.Add(this.ColorChoosing);
@@ -124,6 +136,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -138,5 +151,6 @@
         public System.Windows.Forms.Button sendmessageButton;
         public System.Windows.Forms.ColorDialog colorDialog1;
         public System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Label label1;
     }
 }

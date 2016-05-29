@@ -27,7 +27,7 @@ namespace UserInterface
 
         IPAddress clientIpAddr;
 
-        internal User new_user = Form1.ListOfUsers.FirstOrDefault();
+        internal User new_user;
 
         
 
@@ -102,7 +102,8 @@ namespace UserInterface
 
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                new_user = new User(Form1.ListOfUsers.Count) { Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                Form1.ListOfUsers.Add (new User(Form1.ListOfUsers.Count) { Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() });
+                new_user = Form1.ListOfUsers.LastOrDefault();
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
                 Close();
@@ -110,17 +111,7 @@ namespace UserInterface
 
         }
 
-        private void SignIn_Load(object sender, EventArgs e)
-
-
-        {
-            
-            Form1.ListOfUsers.Add(new User(Form1.ListOfUsers.Count));
-
-          
-            
-
-        }
+    
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {

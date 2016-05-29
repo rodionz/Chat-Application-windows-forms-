@@ -131,6 +131,7 @@
             this.Name = "MyuserControl";
             this.Size = new System.Drawing.Size(1270, 664);
             this.Load += new System.EventHandler(this.MyuserControl_Load);
+            this.Enter += new System.EventHandler(this.MyuserControl_Enter);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);

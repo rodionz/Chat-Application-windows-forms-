@@ -19,7 +19,7 @@ namespace UserInterface
         MessageArgs MA = new MessageArgs();
 
         Server servak = new Server();
-        User localuser = new User(ListOfUsers.Count);
+        User localuser = ListOfUsers.LastOrDefault();
         //ClientInterface.Text = new_user;
         SignIn signinForm = new SignIn();
 
@@ -109,8 +109,9 @@ namespace UserInterface
             TabPage tbp = new TabPage();
             
             tbp.Controls.Add(control);
+            
             this.tabControl1.TabPages.Add(tbp);
-            tbp.Text = localuser.Nickname;
+           
         }
     }
 }

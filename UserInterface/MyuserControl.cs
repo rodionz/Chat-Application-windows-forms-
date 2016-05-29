@@ -22,7 +22,7 @@ namespace UserInterface
         SignIn signinForm = new SignIn();
 
         Server servak = new Server();
-        User localuser = new User(Form1.ListOfUsers.Count);
+       
 
         public MyuserControl()
         {
@@ -61,7 +61,9 @@ namespace UserInterface
         private void MyuserControl_Load(object sender, EventArgs e)
         {
             signinForm.ShowDialog();
+            User localuser = Form1.ListOfUsers.LastOrDefault();
             this.label1.Text = localuser.Nickname;
+
         }
 
         private void sendmessageButton_Click(object sender, EventArgs e)
@@ -71,8 +73,10 @@ namespace UserInterface
 
         }
 
-
-       
-
+        private void MyuserControl_Enter(object sender, EventArgs e)
+        {
+            User localuser = new User(Form1.ListOfUsers.Count);
+            this.label1.Text = localuser.Nickname;
+        }
     }
 }

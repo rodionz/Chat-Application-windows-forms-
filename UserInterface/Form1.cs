@@ -14,7 +14,9 @@ namespace UserInterface
 {
     public partial class Form1 : Form
     {
+        public event EventHandler<MessageArgs> SendMessage;
 
+        MessageArgs MA = new MessageArgs();
 
         Server servak = new Server();
         //User localuser = new User();
@@ -93,6 +95,12 @@ namespace UserInterface
             TabPage tbp = new TabPage();
             tbp.Controls.Add(control);
             this.tabControl1.TabPages.Add(tbp);
+        }
+
+        private void sendmessageButton_Click(object sender, EventArgs e)
+        {
+            MA.MessageText = TextMessages.Text;
+            SendMessage(this, MA);
         }
     }
 }

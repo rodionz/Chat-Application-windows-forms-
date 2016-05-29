@@ -104,6 +104,7 @@
             this.sendmessageButton.TabIndex = 7;
             this.sendmessageButton.Text = "SEND";
             this.sendmessageButton.UseVisualStyleBackColor = true;
+            this.sendmessageButton.Click += new System.EventHandler(this.sendmessageButton_Click);
             // 
             // MyuserControl
             // 

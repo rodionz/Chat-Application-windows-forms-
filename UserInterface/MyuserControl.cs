@@ -13,6 +13,10 @@ namespace UserInterface
     public partial class MyuserControl : UserControl
     {
 
+        public event EventHandler<MessageArgs> SendMessage;
+
+        MessageArgs MA = new MessageArgs();
+
         SignIn signinForm = new SignIn();
 
         public MyuserControl()
@@ -51,6 +55,12 @@ namespace UserInterface
         private void MyuserControl_Load(object sender, EventArgs e)
         {
             signinForm.ShowDialog();
+        }
+
+        private void sendmessageButton_Click(object sender, EventArgs e)
+        {
+            MA.MessageText = TextMessages.Text;
+            SendMessage(this, MA);
         }
     }
 }

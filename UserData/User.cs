@@ -18,7 +18,16 @@ namespace UserData
       public string Nickname
         { get; set; }
 
-        public byte UserID
+        public int UserID
         { get; set; }
+
+
+        public User(int _userID)
+
+        {
+
+            this.UserID = _userID;
+
+        }
     }
 }

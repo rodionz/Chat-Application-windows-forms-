@@ -17,9 +17,12 @@ namespace UserInterface
 
 
         Server servak = new Server();
-        User localuser = new User();
+        //User localuser = new User();
         //ClientInterface.Text = new_user;
         SignIn signinForm = new SignIn();
+
+      public static List<User> ListOfUsers = new List<User>();
+
 
         public Form1()
         {
@@ -58,12 +61,12 @@ namespace UserInterface
 
         private void ClientInterface_Enter(object sender, EventArgs e)
         {
-            if (signinForm.new_user != null)
-            {
-                localuser = signinForm.new_user;
-                ClientInterface.Text = localuser.Nickname;
+            //if (signinForm.new_user != null)
+            //{
+            //    localuser = signinForm.new_user;
+            //    ClientInterface.Text = localuser.Nickname;
 
-            }
+            //}
         }
 
         private void changeFontButton_Click(object sender, EventArgs e)

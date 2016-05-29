@@ -23,15 +23,15 @@ namespace UserInterface
     {
         public Server server1;
 
-        List<User> listofUsers = new List<User>();
+        //List<User> listofUsers = new List<User>();
 
         IPAddress clientIpAddr;
 
         List<string> listofUsername = new List<string>();
 
-        internal User new_user;
+      
 
-
+    
 
 
 
@@ -93,7 +93,7 @@ namespace UserInterface
 
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                new_user = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                //new_user = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
                 Close();
@@ -105,7 +105,8 @@ namespace UserInterface
 
 
         {
-
+            
+            Form1.ListOfUsers.Add(new User(Form1.ListOfUsers.Count));
 
             listofUsername.Add(" ");
             

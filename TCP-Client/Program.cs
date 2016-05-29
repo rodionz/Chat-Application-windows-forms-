@@ -21,7 +21,7 @@ namespace TCP_Client
         static void Main(string[] args)
         {
 
-            User user1 = new User();
+            User user1 = Form1.ListOfUsers.First();
 
             TcpClient client = new TcpClient();
             client.Connect(IPAddress.Parse(user1.IP), user1.Port);

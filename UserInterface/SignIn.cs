@@ -29,6 +29,10 @@ namespace UserInterface
 
         internal User new_user;
 
+        public event EventHandler newUsercreated;
+
+        NewUserEventArgs NUEA = new NewUserEventArgs();
+
         
 
 
@@ -103,6 +107,7 @@ namespace UserInterface
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
                 Form1.ListOfUsers.Add (new User(Form1.ListOfUsers.Count) { Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() });
+                newUsercreated(this, NUEA);
                 new_user = Form1.ListOfUsers.LastOrDefault();
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;

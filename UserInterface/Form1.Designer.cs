@@ -346,6 +346,7 @@
             this.addclient2button.TabIndex = 0;
             this.addclient2button.Text = "ADD NEW CLIENT";
             this.addclient2button.UseVisualStyleBackColor = true;
+            this.addclient2button.Click += new System.EventHandler(this.addclient2button_Click);
             // 
             // tabPage6
             // 

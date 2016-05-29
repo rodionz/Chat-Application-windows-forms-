@@ -15,6 +15,7 @@ namespace UserInterface
     public partial class Form1 : Form
     {
 
+
         Server servak = new Server();
         User localuser = new User();
         //ClientInterface.Text = new_user;
@@ -80,6 +81,11 @@ namespace UserInterface
                 this.TextMessages.Font = fontDialog1.Font;
 
             }
+        }
+
+        private void addclient2button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

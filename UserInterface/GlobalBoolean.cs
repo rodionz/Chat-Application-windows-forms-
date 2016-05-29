@@ -55,7 +55,7 @@ namespace UserInterface
         }
 
 
-        public static void RestBooleans()
+        public static void ResetBooleans()
 
         {
 

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientUI.cs">
+    <Compile Include="UserInterfaceClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientUI.Designer.cs">
-      <DependentUpon>ClientUI.cs</DependentUpon>
+    <Compile Include="UserInterfaceClass.Designer.cs">
+      <DependentUpon>UserInterfaceClass.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientUiBooleans.cs" />
     <Compile Include="Program.cs" />
@@ -61,8 +61,8 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClientUI.resx">
-      <DependentUpon>ClientUI.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterfaceClass.resx">
+      <DependentUpon>UserInterfaceClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

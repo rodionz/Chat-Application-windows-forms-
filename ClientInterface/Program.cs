@@ -16,7 +16,7 @@ namespace ClientInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClientUI());
+            Application.Run(new UserInterfaceClass());
         }
     }
 }

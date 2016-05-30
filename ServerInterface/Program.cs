@@ -16,7 +16,7 @@ namespace ServerInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ServerInterface());
+            Application.Run(new ServerInterfaceClass());
         }
     }
 }

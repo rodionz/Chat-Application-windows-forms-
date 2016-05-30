@@ -41,6 +41,9 @@
             this.NicknameConfirmationButton = new System.Windows.Forms.Button();
             this.PortConfirmationButtom = new System.Windows.Forms.Button();
             this.ConnectButton = new System.Windows.Forms.Button();
+            this.IPconfirmationLabel = new System.Windows.Forms.Label();
+            this.NickNameConfirmationLabel = new System.Windows.Forms.Label();
+            this.portConfirmationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -106,6 +109,7 @@
             this.clearIP.TabIndex = 20;
             this.clearIP.Text = "Clear";
             this.clearIP.UseVisualStyleBackColor = false;
+            this.clearIP.Click += new System.EventHandler(this.clearIP_Click);
             // 
             // UsernameClearButton
             // 
@@ -116,6 +120,7 @@
             this.UsernameClearButton.TabIndex = 21;
             this.UsernameClearButton.Text = "Clear";
             this.UsernameClearButton.UseVisualStyleBackColor = false;
+            this.UsernameClearButton.Click += new System.EventHandler(this.UsernameClearButton_Click);
             // 
             // Clearportbutton
             // 
@@ -126,6 +131,7 @@
             this.Clearportbutton.TabIndex = 22;
             this.Clearportbutton.Text = "Clear";
             this.Clearportbutton.UseVisualStyleBackColor = false;
+            this.Clearportbutton.Click += new System.EventHandler(this.Clearportbutton_Click);
             // 
             // ConfirmIP
             // 
@@ -136,6 +142,7 @@
             this.ConfirmIP.TabIndex = 23;
             this.ConfirmIP.Text = "ConfirmIP";
             this.ConfirmIP.UseVisualStyleBackColor = true;
+            this.ConfirmIP.Click += new System.EventHandler(this.ConfirmIP_Click);
             // 
             // NicknameConfirmationButton
             // 
@@ -167,12 +174,44 @@
             this.ConnectButton.Text = "Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
             // 
+            // IPconfirmationLabel
+            // 
+            this.IPconfirmationLabel.AutoSize = true;
+            this.IPconfirmationLabel.Font = new System.Drawing.Font("Narkisim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.IPconfirmationLabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.IPconfirmationLabel.Location = new System.Drawing.Point(840, 70);
+            this.IPconfirmationLabel.Name = "IPconfirmationLabel";
+            this.IPconfirmationLabel.Size = new System.Drawing.Size(0, 16);
+            this.IPconfirmationLabel.TabIndex = 27;
+            // 
+            // NickNameConfirmationLabel
+            // 
+            this.NickNameConfirmationLabel.AutoSize = true;
+            this.NickNameConfirmationLabel.Font = new System.Drawing.Font("Narkisim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.NickNameConfirmationLabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.NickNameConfirmationLabel.Location = new System.Drawing.Point(840, 122);
+            this.NickNameConfirmationLabel.Name = "NickNameConfirmationLabel";
+            this.NickNameConfirmationLabel.Size = new System.Drawing.Size(0, 16);
+            this.NickNameConfirmationLabel.TabIndex = 28;
+            // 
+            // portConfirmationLabel
+            // 
+            this.portConfirmationLabel.AutoSize = true;
+            this.portConfirmationLabel.Font = new System.Drawing.Font("Narkisim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.portConfirmationLabel.Location = new System.Drawing.Point(840, 174);
+            this.portConfirmationLabel.Name = "portConfirmationLabel";
+            this.portConfirmationLabel.Size = new System.Drawing.Size(0, 16);
+            this.portConfirmationLabel.TabIndex = 29;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(858, 453);
+            this.ClientSize = new System.Drawing.Size(1066, 453);
+            this.Controls.Add(this.portConfirmationLabel);
+            this.Controls.Add(this.NickNameConfirmationLabel);
+            this.Controls.Add(this.IPconfirmationLabel);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.PortConfirmationButtom);
             this.Controls.Add(this.NicknameConfirmationButton);
@@ -208,5 +247,8 @@
         public System.Windows.Forms.Button NicknameConfirmationButton;
         private System.Windows.Forms.Button PortConfirmationButtom;
         public System.Windows.Forms.Button ConnectButton;
+        private System.Windows.Forms.Label IPconfirmationLabel;
+        private System.Windows.Forms.Label NickNameConfirmationLabel;
+        private System.Windows.Forms.Label portConfirmationLabel;
     }
 }

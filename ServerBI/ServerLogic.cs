@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using CommonTypes;
+using System.IO;
 
 namespace ServerBI
 {
@@ -16,7 +17,7 @@ namespace ServerBI
         public string IPAdress
         { get; set; }
 
-        public int Port
+        public int Serverport
         { get; set; }
 
         public List<UserData>  udl
@@ -28,7 +29,25 @@ namespace ServerBI
         public void  StartListening ()
 
         {
+            TcpListener listener = new TcpListener(IPAddress.Loopback, Serverport);
 
+            try
+            {
+                listener.Start();
+                TcpClient talker = listener.AcceptTcpClient();
+                //    TcpClient talker = listener.AcceptTcpClientAsync();
+                using (Stream str = talker.GetStream())
+                {
+
+
+                }
+
+            }
+
+            finally
+            {
+                listener.Stop();
+            }
 
         }
 

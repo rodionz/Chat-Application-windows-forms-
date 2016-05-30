@@ -1,6 +1,6 @@
 ﻿namespace ClientInterface
 {
-    partial class ClientUI
+    partial class UserInterfaceClass
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,10 @@
             this.sendmessageButton = new System.Windows.Forms.Button();
             this.changeFontButton = new System.Windows.Forms.Button();
             this.ColorChoosing = new System.Windows.Forms.Button();
+            this.ConnectToserverButton = new System.Windows.Forms.Button();
+            this.DisconnectFromServerButton = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +95,7 @@
             this.changeFontButton.TabIndex = 10;
             this.changeFontButton.Text = "Change Font";
             this.changeFontButton.UseVisualStyleBackColor = true;
+            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
             // 
             // ColorChoosing
             // 
@@ -100,19 +105,41 @@
             this.ColorChoosing.TabIndex = 9;
             this.ColorChoosing.Text = "ChooseYourColor";
             this.ColorChoosing.UseVisualStyleBackColor = true;
+            this.ColorChoosing.Click += new System.EventHandler(this.ColorChoosing_Click);
             // 
-            // ClientUI
+            // ConnectToserverButton
+            // 
+            this.ConnectToserverButton.Location = new System.Drawing.Point(583, 382);
+            this.ConnectToserverButton.Name = "ConnectToserverButton";
+            this.ConnectToserverButton.Size = new System.Drawing.Size(75, 23);
+            this.ConnectToserverButton.TabIndex = 11;
+            this.ConnectToserverButton.Text = "Connect";
+            this.ConnectToserverButton.UseVisualStyleBackColor = true;
+            this.ConnectToserverButton.Click += new System.EventHandler(this.ConnectToserverButton_Click);
+            // 
+            // DisconnectFromServerButton
+            // 
+            this.DisconnectFromServerButton.Location = new System.Drawing.Point(583, 442);
+            this.DisconnectFromServerButton.Name = "DisconnectFromServerButton";
+            this.DisconnectFromServerButton.Size = new System.Drawing.Size(75, 23);
+            this.DisconnectFromServerButton.TabIndex = 12;
+            this.DisconnectFromServerButton.Text = "Disconnect";
+            this.DisconnectFromServerButton.UseVisualStyleBackColor = true;
+            // 
+            // UserInterfaceClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(932, 562);
+            this.Controls.Add(this.DisconnectFromServerButton);
+            this.Controls.Add(this.ConnectToserverButton);
             this.Controls.Add(this.changeFontButton);
             this.Controls.Add(this.ColorChoosing);
             this.Controls.Add(this.sendmessageButton);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Name = "ClientUI";
+            this.Name = "UserInterfaceClass";
             this.Text = "ClientInterface";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -131,6 +158,10 @@
         public System.Windows.Forms.Button sendmessageButton;
         private System.Windows.Forms.Button changeFontButton;
         public System.Windows.Forms.Button ColorChoosing;
+        private System.Windows.Forms.Button ConnectToserverButton;
+        private System.Windows.Forms.Button DisconnectFromServerButton;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 

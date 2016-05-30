@@ -1,6 +1,6 @@
 ﻿namespace ServerInterface
 {
-    partial class ServerInterface
+    partial class ServerInterfaceClass
     {
         /// <summary>
         /// Required designer variable.

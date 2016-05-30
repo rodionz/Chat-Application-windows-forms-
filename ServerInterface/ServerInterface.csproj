@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServerInterface.cs">
+    <Compile Include="ServerInterfaceClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ServerInterface.Designer.cs">
-      <DependentUpon>ServerInterface.cs</DependentUpon>
+    <Compile Include="ServerInterfaceClass.Designer.cs">
+      <DependentUpon>ServerInterfaceClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +78,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ServerInterface.resx">
-      <DependentUpon>ServerInterface.cs</DependentUpon>
+    <EmbeddedResource Include="ServerInterfaceClass.resx">
+      <DependentUpon>ServerInterfaceClass.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

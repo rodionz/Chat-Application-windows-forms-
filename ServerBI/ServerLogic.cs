@@ -13,8 +13,32 @@ namespace ServerBI
     public class ServerLogic
     {
 
+        public string IPAdress
+        { get; set; }
+
+        public int Port
+        { get; set; }
+
+        public List<UserData>  udl
+        { get; set; }
+
       
 
+
+        public void  StartListening ()
+
+        {
+
+
+        }
+
+
+        public void StopListening()
+
+        {
+
+
+        }
 
     }
 }

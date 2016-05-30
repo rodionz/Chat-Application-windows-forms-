@@ -58,7 +58,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Gray;
+            this.tabPage4.BackColor = System.Drawing.Color.Transparent;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -68,7 +68,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage5.BackColor = System.Drawing.Color.Transparent;
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -80,7 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 568);
+            this.BackColor = System.Drawing.Color.DarkOrchid;
+            this.ClientSize = new System.Drawing.Size(999, 568);
             this.Controls.Add(this.panel1);
             this.Name = "ServerInterface";
             this.Text = "ServerUi";

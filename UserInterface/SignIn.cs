@@ -27,11 +27,20 @@ namespace UserInterface
 
         IPAddress clientIpAddr;
 
-        List<string> listofUsername = new List<string>();
+        internal User new_user;
 
-      
+        public event EventHandler newUsercreated;
 
-    
+        NewUserEventArgs NUEA = new NewUserEventArgs();
+
+        
+
+
+
+
+
+
+
 
 
 
@@ -48,17 +57,17 @@ namespace UserInterface
         
 
 
-        private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (GlobalBoolean.UserIsValid == false)
-            {
+        //private void SignIn_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (GlobalBoolean.UserIsValid == false)
+        //    {
 
-                e.Cancel = true;
-            }
+        //        e.Cancel = true;
+        //    }
 
-            GlobalBoolean.ResetBooleans();
+        //    GlobalBoolean.ResetBooleans();
 
-        }
+        //}
 
       
 
@@ -66,9 +75,13 @@ namespace UserInterface
 
         private void NicknameConfirmationButton_Click(object sender, EventArgs e)
         {
-            //var uniq = listofUsers.Where(usr => usr.Nickname == this.UserNameBox.Text).Count();
+            
 
-            bool a = listofUsername.Contains(UserNameBox.Text);
+            var listofnames = from n in Form1.ListOfUsers
+                              select (n.Nickname);
+
+
+            bool a = listofnames.Contains(UserNameBox.Text);
 
             if (!a)
             {
@@ -93,25 +106,19 @@ namespace UserInterface
 
             if (GlobalBoolean.IPconfirmed  && GlobalBoolean.NicnameConfirmed  && GlobalBoolean.PORTconfirmed )
             {
-                //new_user = new User() {Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() };
+                Form1.ListOfUsers.Add (new User(Form1.ListOfUsers.Count) { Nickname = this.UserNameBox.Text, IP = clientIpAddr.ToString() });
+                newUsercreated(this, NUEA);
+                new_user = Form1.ListOfUsers.LastOrDefault();
                 TcpClient client1 = new TcpClient();
                 GlobalBoolean.UserIsValid = true;
+                GlobalBoolean.ResetBooleans();
+                ClearAll();
                 Close();
             }
 
         }
 
-        private void SignIn_Load(object sender, EventArgs e)
-
-
-        {
-            
-            Form1.ListOfUsers.Add(new User(Form1.ListOfUsers.Count));
-
-            listofUsername.Add(" ");
-            
-
-        }
+    
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
@@ -187,6 +194,13 @@ namespace UserInterface
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
+            portTextBox.Clear();
+        }
+
+        private void ClearAll()
+        {
+            IPmaskedTextBox.Clear();
+            UserNameBox.Clear();
             portTextBox.Clear();
         }
     }

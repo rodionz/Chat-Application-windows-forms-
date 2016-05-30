@@ -64,39 +64,27 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.ClientInterface = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.TextMessages = new System.Windows.Forms.TextBox();
-            this.sendmessageButton = new System.Windows.Forms.Button();
-            this.ColorChoosing = new System.Windows.Forms.Button();
-            this.changeFontButton = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Serverside = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
-            this.ClientInterface.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.Serverside.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -287,110 +275,57 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // ClientInterface
+            // Serverside
             // 
-            this.ClientInterface.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientInterface.Controls.Add(this.button1);
-            this.ClientInterface.Controls.Add(this.changeFontButton);
-            this.ClientInterface.Controls.Add(this.ColorChoosing);
-            this.ClientInterface.Controls.Add(this.sendmessageButton);
-            this.ClientInterface.Controls.Add(this.panel6);
-            this.ClientInterface.Controls.Add(this.panel5);
-            this.ClientInterface.Controls.Add(this.panel4);
-            this.ClientInterface.Location = new System.Drawing.Point(4, 22);
-            this.ClientInterface.Name = "ClientInterface";
-            this.ClientInterface.Padding = new System.Windows.Forms.Padding(3);
-            this.ClientInterface.Size = new System.Drawing.Size(1252, 551);
-            this.ClientInterface.TabIndex = 1;
-            this.ClientInterface.Text = "ClientSide";
-            this.ClientInterface.Enter += new System.EventHandler(this.ClientInterface_Enter);
+            this.Serverside.BackColor = System.Drawing.Color.DarkOrchid;
+            this.Serverside.Controls.Add(this.button2);
+            this.Serverside.Controls.Add(this.panel3);
+            this.Serverside.Controls.Add(this.panel2);
+            this.Serverside.Controls.Add(this.panel1);
+            this.Serverside.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Serverside.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Serverside.Location = new System.Drawing.Point(4, 22);
+            this.Serverside.Name = "Serverside";
+            this.Serverside.Padding = new System.Windows.Forms.Padding(3);
+            this.Serverside.Size = new System.Drawing.Size(1252, 551);
+            this.Serverside.TabIndex = 0;
+            this.Serverside.Text = "Server Side";
             // 
-            // panel4
+            // button2
             // 
-            this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(53, 49);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 219);
-            this.panel4.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(670, 25);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(386, 49);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(330, 235);
-            this.panel5.TabIndex = 1;
+            this.panel3.BackColor = System.Drawing.Color.Aqua;
+            this.panel3.Controls.Add(this.toolStrip1);
+            this.panel3.Location = new System.Drawing.Point(966, 294);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(278, 180);
+            this.panel3.TabIndex = 2;
             // 
-            // textBox1
+            // toolStrip1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 17);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 202);
-            this.textBox1.TabIndex = 0;
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(278, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // panel6
+            // panel2
             // 
-            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel6.Controls.Add(this.TextMessages);
-            this.panel6.Location = new System.Drawing.Point(386, 302);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(341, 67);
-            this.panel6.TabIndex = 2;
-            // 
-            // TextMessages
-            // 
-            this.TextMessages.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TextMessages.Location = new System.Drawing.Point(23, 13);
-            this.TextMessages.Multiline = true;
-            this.TextMessages.Name = "TextMessages";
-            this.TextMessages.Size = new System.Drawing.Size(283, 39);
-            this.TextMessages.TabIndex = 0;
-            // 
-            // sendmessageButton
-            // 
-            this.sendmessageButton.Location = new System.Drawing.Point(766, 315);
-            this.sendmessageButton.Name = "sendmessageButton";
-            this.sendmessageButton.Size = new System.Drawing.Size(100, 39);
-            this.sendmessageButton.TabIndex = 3;
-            this.sendmessageButton.Text = "SEND";
-            this.sendmessageButton.UseVisualStyleBackColor = true;
-            // 
-            // ColorChoosing
-            // 
-            this.ColorChoosing.Location = new System.Drawing.Point(399, 407);
-            this.ColorChoosing.Name = "ColorChoosing";
-            this.ColorChoosing.Size = new System.Drawing.Size(109, 33);
-            this.ColorChoosing.TabIndex = 4;
-            this.ColorChoosing.Text = "ChooseYourColor";
-            this.ColorChoosing.UseVisualStyleBackColor = true;
-            this.ColorChoosing.Click += new System.EventHandler(this.ColorChoosing_Click);
-            // 
-            // changeFontButton
-            // 
-            this.changeFontButton.Location = new System.Drawing.Point(399, 458);
-            this.changeFontButton.Name = "changeFontButton";
-            this.changeFontButton.Size = new System.Drawing.Size(109, 36);
-            this.changeFontButton.TabIndex = 5;
-            this.changeFontButton.Text = "Change Font";
-            this.changeFontButton.UseVisualStyleBackColor = true;
-            this.changeFontButton.Click += new System.EventHandler(this.changeFontButton_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.DarkOrchid;
-            this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1252, 551);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Server Side";
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Location = new System.Drawing.Point(855, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(260, 177);
+            this.panel2.TabIndex = 1;
             // 
             // panel1
             // 
@@ -402,6 +337,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 326);
             this.panel1.TabIndex = 0;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Location = new System.Drawing.Point(15, 32);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(400, 274);
+            this.tabControl2.TabIndex = 1;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Gray;
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(392, 245);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Current Users";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(392, 245);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "History";
             // 
             // menuStrip1
             // 
@@ -431,7 +396,7 @@
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // helpToolStripMenuItem
@@ -440,81 +405,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Location = new System.Drawing.Point(15, 32);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(400, 274);
-            this.tabControl2.TabIndex = 1;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(392, 245);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "History";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Gray;
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(392, 245);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Current Users";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(855, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(260, 177);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Aqua;
-            this.panel3.Controls.Add(this.toolStrip1);
-            this.panel3.Location = new System.Drawing.Point(966, 294);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(278, 180);
-            this.panel3.TabIndex = 2;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(278, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.ClientInterface);
+            this.tabControl1.Controls.Add(this.Serverside);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1260, 577);
             this.tabControl1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1138, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -526,20 +424,16 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
-            this.ClientInterface.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.Serverside.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -586,7 +480,7 @@
         public System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.ToolTip toolTip2;
         public System.Windows.Forms.TabControl tabControl1;
-        public System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.TabPage Serverside;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.Panel panel2;
@@ -599,16 +493,7 @@
         public System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        public System.Windows.Forms.TabPage ClientInterface;
-        private System.Windows.Forms.Button changeFontButton;
-        public System.Windows.Forms.Button ColorChoosing;
-        public System.Windows.Forms.Button sendmessageButton;
-        public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.TextBox TextMessages;
-        public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

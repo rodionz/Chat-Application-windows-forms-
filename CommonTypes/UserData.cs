@@ -19,7 +19,8 @@ namespace CommonTypes
         public int Userid
         { get; set; }
 
-       
+        public Font Uf
+        { get; set; }
 
     }
 }

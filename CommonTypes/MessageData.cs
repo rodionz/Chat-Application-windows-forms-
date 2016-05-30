@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace CommonTypes
 {
-    class MessageData
+  public  class MessageData
     {
         public string Textmessage
         { get; set; }
@@ -19,6 +19,9 @@ namespace CommonTypes
         { get; set; }
 
         public UserData Ud
+        { get; set; }
+
+        public Font Uf
         { get; set; }
     }
 }

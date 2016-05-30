@@ -13,10 +13,14 @@ namespace ServerInterface
 {
     public partial class ChangeIPDialog : Form
     {
-        public ChangeIPDialog()
+        public ChangeIPDialog(ServerInterfaceClass sclass)
         {
+            SIC = sclass;
             InitializeComponent();
         }
+
+        ServerInterfaceClass SIC;
+       
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {

@@ -13,21 +13,23 @@ namespace ServerInterface
 {
     public partial class ServerRegistration : Form
     {
-        public ServerRegistration( )
+        public ServerRegistration(ServerOnlineArgs so)
         {
+            Soarg = so;
             InitializeComponent();
         }
 
-       
+
+        ServerOnlineArgs Soarg;
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-            
+            Soarg.IPofServer = IPmaskedTextBox.Text;
         }
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-
+            Soarg.PortofServer = int.Parse(portTextBox.Text);
         }
 
         private void CreateServerButton_Click(object sender, EventArgs e)

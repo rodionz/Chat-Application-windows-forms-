@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ServerInterface
 {
-    public partial class Form1 : Form
+    public partial class ServerInterface : Form
     {
-        public Form1()
+        public ServerInterface()
         {
             InitializeComponent();
         }

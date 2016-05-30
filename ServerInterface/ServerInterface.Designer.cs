@@ -1,6 +1,6 @@
 ﻿namespace ServerInterface
 {
-    partial class Form1
+    partial class ServerInterface
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ServerInterface
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(623, 450);
+            this.Name = "ServerInterface";
+            this.Text = "ServerUi";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

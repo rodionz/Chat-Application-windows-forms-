@@ -65,6 +65,7 @@
             this.tabPage4.Size = new System.Drawing.Size(392, 248);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Current Users";
+           
             // 
             // tabPage5
             // 
@@ -76,14 +77,14 @@
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "History";
             // 
-            // ServerInterface
+            // ServerInterfaceClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(999, 568);
             this.Controls.Add(this.panel1);
-            this.Name = "ServerInterface";
+            this.Name = "ServerInterfaceClass";
             this.Text = "ServerUi";
             this.panel1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);

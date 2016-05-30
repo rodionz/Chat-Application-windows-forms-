@@ -8,6 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonTypes;
 
 namespace ClientInterface
 {
@@ -18,7 +19,7 @@ namespace ClientInterface
             InitializeComponent();
         }
 
-
+        ServerData Sdata;
         IPAddress clientIpAddr;
 
 
@@ -35,7 +36,7 @@ namespace ClientInterface
 
             if (b == true)
             {
-                if (clientIpAddr.ToString() == server1.IP)
+                if (clientIpAddr.ToString() == Sdata.IPofServer)
                 {
                     IPconfirmationLabel.ForeColor = Color.Lime;
                     IPconfirmationLabel.Text = "IP Confimed";
@@ -72,6 +73,11 @@ namespace ClientInterface
             IPmaskedTextBox.Clear();
             UserNameBox.Clear();
             portTextBox.Clear();
+        }
+
+        private void PortConfirmationButtom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -163,6 +163,7 @@
             this.PortConfirmationButtom.TabIndex = 25;
             this.PortConfirmationButtom.Text = "Confirm port";
             this.PortConfirmationButtom.UseVisualStyleBackColor = true;
+            this.PortConfirmationButtom.Click += new System.EventHandler(this.PortConfirmationButtom_Click);
             // 
             // ConnectButton
             // 

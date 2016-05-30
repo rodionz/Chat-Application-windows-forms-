@@ -75,7 +75,6 @@
             this.portTextBox.Size = new System.Drawing.Size(108, 20);
             this.portTextBox.TabIndex = 20;
             this.portTextBox.ValidatingType = typeof(int);
-            this.portTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.portTextBox_MaskInputRejected);
             // 
             // clearIP
             // 
@@ -106,6 +105,7 @@
             this.ConfirmIP.TabIndex = 24;
             this.ConfirmIP.Text = "ConfirmIP";
             this.ConfirmIP.UseVisualStyleBackColor = true;
+            this.ConfirmIP.Click += new System.EventHandler(this.ConfirmIP_Click);
             // 
             // PortConfirmationButtom
             // 
@@ -116,6 +116,7 @@
             this.PortConfirmationButtom.TabIndex = 26;
             this.PortConfirmationButtom.Text = "Confirm port";
             this.PortConfirmationButtom.UseVisualStyleBackColor = true;
+            this.PortConfirmationButtom.Click += new System.EventHandler(this.PortConfirmationButtom_Click);
             // 
             // CreateServerButton
             // 
@@ -126,6 +127,7 @@
             this.CreateServerButton.TabIndex = 27;
             this.CreateServerButton.Text = "Create Server";
             this.CreateServerButton.UseVisualStyleBackColor = true;
+            this.CreateServerButton.Click += new System.EventHandler(this.CreateServerButton_Click);
             // 
             // ServerRegistration
             // 

@@ -7,17 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonTypes;
 
 namespace ServerInterface
 {
     public partial class ServerRegistration : Form
     {
-        public ServerRegistration()
+        public ServerRegistration( )
         {
             InitializeComponent();
         }
 
-        private void portTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+       
+
+        private void ConfirmIP_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void PortConfirmationButtom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateServerButton_Click(object sender, EventArgs e)
         {
 
         }

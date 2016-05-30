@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonTypes;
+
 
 namespace ServerInterface
 {
@@ -15,6 +17,11 @@ namespace ServerInterface
         public ChangePortDialog()
         {
             InitializeComponent();
+        }
+
+        private void PortConfirmationButtom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

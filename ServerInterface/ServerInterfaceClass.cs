@@ -17,7 +17,14 @@ namespace ServerInterface
         {
             InitializeComponent();
         }
+
+        ServerData SD = new ServerData();
+
         ServerRegistration Sr = new ServerRegistration();
+
+        ChangeIPDialog ChIp = new ChangeIPDialog();
+
+        ChangePortDialog Cpd = new ChangePortDialog();
 
         ServerOnlineArgs SOargs = new ServerOnlineArgs();
 
@@ -32,12 +39,12 @@ namespace ServerInterface
 
         private void ChangeIpButton_Click(object sender, EventArgs e)
         {
-
+            ChIp.ShowDialog();
         }
 
         private void ChangePortButton_Click(object sender, EventArgs e)
         {
-
+            Cpd.ShowDialog();
         }
     }
 }

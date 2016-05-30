@@ -44,7 +44,7 @@
             this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.tabControl2);
-            this.panel1.Location = new System.Drawing.Point(87, 62);
+            this.panel1.Location = new System.Drawing.Point(248, 48);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 326);
             this.panel1.TabIndex = 1;
@@ -81,7 +81,7 @@
             // 
             // StartServerButton
             // 
-            this.StartServerButton.Location = new System.Drawing.Point(162, 433);
+            this.StartServerButton.Location = new System.Drawing.Point(248, 442);
             this.StartServerButton.Name = "StartServerButton";
             this.StartServerButton.Size = new System.Drawing.Size(103, 43);
             this.StartServerButton.TabIndex = 2;
@@ -91,7 +91,7 @@
             // 
             // ChangeIpButton
             // 
-            this.ChangeIpButton.Location = new System.Drawing.Point(366, 433);
+            this.ChangeIpButton.Location = new System.Drawing.Point(451, 442);
             this.ChangeIpButton.Name = "ChangeIpButton";
             this.ChangeIpButton.Size = new System.Drawing.Size(85, 43);
             this.ChangeIpButton.TabIndex = 3;
@@ -101,7 +101,7 @@
             // 
             // ChangePortButton
             // 
-            this.ChangePortButton.Location = new System.Drawing.Point(509, 433);
+            this.ChangePortButton.Location = new System.Drawing.Point(610, 442);
             this.ChangePortButton.Name = "ChangePortButton";
             this.ChangePortButton.Size = new System.Drawing.Size(86, 43);
             this.ChangePortButton.TabIndex = 4;
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOrchid;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(999, 568);
             this.Controls.Add(this.ChangePortButton);
             this.Controls.Add(this.ChangeIpButton);

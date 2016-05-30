@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonTypes;
 
 namespace ServerInterface
 {
@@ -15,6 +16,11 @@ namespace ServerInterface
         public ChangeIPDialog()
         {
             InitializeComponent();
+        }
+
+        private void ConfirmIP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

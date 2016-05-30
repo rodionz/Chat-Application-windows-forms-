@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonTypes;
 
 namespace ClientInterface
 {
@@ -18,6 +19,8 @@ namespace ClientInterface
         }
 
         SignIn registration = new SignIn();
+
+       public static List<UserData> ListofUsers = new List<UserData>();
 
         private void ColorChoosing_Click(object sender, EventArgs e)
         {

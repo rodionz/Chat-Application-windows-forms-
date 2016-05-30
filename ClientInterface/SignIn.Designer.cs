@@ -153,6 +153,7 @@
             this.NicknameConfirmationButton.TabIndex = 24;
             this.NicknameConfirmationButton.Text = "Confirm UserName";
             this.NicknameConfirmationButton.UseVisualStyleBackColor = true;
+            this.NicknameConfirmationButton.Click += new System.EventHandler(this.NicknameConfirmationButton_Click);
             // 
             // PortConfirmationButtom
             // 
@@ -174,6 +175,7 @@
             this.ConnectButton.TabIndex = 26;
             this.ConnectButton.Text = "Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // IPconfirmationLabel
             // 
@@ -209,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1066, 453);
+            this.ClientSize = new System.Drawing.Size(804, 381);
             this.Controls.Add(this.portConfirmationLabel);
             this.Controls.Add(this.NickNameConfirmationLabel);
             this.Controls.Add(this.IPconfirmationLabel);

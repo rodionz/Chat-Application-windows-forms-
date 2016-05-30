@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommonTypes
+namespace ClientInterface
 {
-   public class ServerData
+    class NewUserEventArgs : EventArgs
     {
 
-        public string IPofServer
+        public string MessageText
         { get; set; }
-
-        public int PortofServer
-        { get; set; }
-
     }
 }

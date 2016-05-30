@@ -17,7 +17,27 @@ namespace ServerInterface
         {
             InitializeComponent();
         }
+        ServerRegistration Sr = new ServerRegistration();
 
-       
+        ServerOnlineArgs SOargs = new ServerOnlineArgs();
+
+        public event EventHandler<ServerOnlineArgs> ServerisOnline;
+
+        private void StartServerButton_Click(object sender, EventArgs e)
+        {
+            Sr.ShowDialog();
+            ServerData sData = new ServerData();
+            ServerisOnline(this, SOargs);
+        }
+
+        private void ChangeIpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePortButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

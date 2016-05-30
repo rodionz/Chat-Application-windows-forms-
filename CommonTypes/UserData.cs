@@ -19,8 +19,21 @@ namespace CommonTypes
         public int Userid
         { get; set; }
 
-        public Font Uf
+        public Font Ufont
         { get; set; }
 
+        public string UserIP
+        { get; set; }
+
+        public int UserPort
+        { get; set; }
+
+
+        public UserData(int numofuser)
+            {
+            this.Userid = numofuser;
+
+
+        }
     }
 }

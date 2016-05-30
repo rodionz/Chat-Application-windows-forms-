@@ -18,7 +18,7 @@ namespace ServerInterface
             InitializeComponent();
         }
 
-        ServerData serverData = new ServerData();
+      
 
       
 
@@ -34,19 +34,20 @@ namespace ServerInterface
         {
             ServerRegistration Sr = new ServerRegistration(SOargs);
             Sr.ShowDialog();
-            ServerData sData = new ServerData();
+            
             ServerisOnline(this, SOargs);
+
         }
 
         private void ChangeIpButton_Click(object sender, EventArgs e)
         {
-            ChangeIPDialog ChIp = new ChangeIPDialog(this);
+            ChangeIPDialog ChIp = new ChangeIPDialog(SOargs);
             ChIp.ShowDialog();
         }
 
         private void ChangePortButton_Click(object sender, EventArgs e)
         {
-            ChangePortDialog Cpd = new ChangePortDialog(this);
+            ChangePortDialog Cpd = new ChangePortDialog(SOargs);
 
             Cpd.ShowDialog();
         }

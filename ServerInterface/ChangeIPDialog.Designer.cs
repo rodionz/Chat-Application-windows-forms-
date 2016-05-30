@@ -54,6 +54,7 @@
             this.clearIP.TabIndex = 27;
             this.clearIP.Text = "Clear";
             this.clearIP.UseVisualStyleBackColor = false;
+            this.clearIP.Click += new System.EventHandler(this.clearIP_Click);
             // 
             // IPmaskedTextBox
             // 

@@ -54,6 +54,7 @@
             this.Clearportbutton.TabIndex = 29;
             this.Clearportbutton.Text = "Clear";
             this.Clearportbutton.UseVisualStyleBackColor = false;
+            this.Clearportbutton.Click += new System.EventHandler(this.Clearportbutton_Click);
             // 
             // portTextBox
             // 

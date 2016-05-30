@@ -85,6 +85,7 @@
             this.clearIP.TabIndex = 21;
             this.clearIP.Text = "Clear";
             this.clearIP.UseVisualStyleBackColor = false;
+            this.clearIP.Click += new System.EventHandler(this.clearIP_Click);
             // 
             // Clearportbutton
             // 
@@ -95,6 +96,7 @@
             this.Clearportbutton.TabIndex = 23;
             this.Clearportbutton.Text = "Clear";
             this.Clearportbutton.UseVisualStyleBackColor = false;
+            this.Clearportbutton.Click += new System.EventHandler(this.Clearportbutton_Click);
             // 
             // ConfirmIP
             // 

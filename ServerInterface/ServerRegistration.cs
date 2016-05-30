@@ -34,7 +34,17 @@ namespace ServerInterface
 
         private void CreateServerButton_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        private void clearIP_Click(object sender, EventArgs e)
+        {
+            IPmaskedTextBox.Clear();
+        }
+
+        private void Clearportbutton_Click(object sender, EventArgs e)
+        {
+            portTextBox.Clear();
         }
     }
 }

@@ -39,8 +39,16 @@
             this.DisconnectFromServerButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.RedLamp = new System.Windows.Forms.PictureBox();
+            this.GreenLamp = new System.Windows.Forms.PictureBox();
+            this.RedLightPanel = new System.Windows.Forms.Panel();
+            this.GreenLightPanel = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RedLamp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GreenLamp)).BeginInit();
+            this.RedLightPanel.SuspendLayout();
+            this.GreenLightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -126,12 +134,48 @@
             this.DisconnectFromServerButton.Text = "Disconnect";
             this.DisconnectFromServerButton.UseVisualStyleBackColor = true;
             // 
+            // RedLamp
+            // 
+            this.RedLamp.Image = global::ClientInterface.Properties.Resources.red;
+            this.RedLamp.Location = new System.Drawing.Point(50, 3);
+            this.RedLamp.Name = "RedLamp";
+            this.RedLamp.Size = new System.Drawing.Size(35, 34);
+            this.RedLamp.TabIndex = 13;
+            this.RedLamp.TabStop = false;
+            // 
+            // GreenLamp
+            // 
+            this.GreenLamp.Image = global::ClientInterface.Properties.Resources.green;
+            this.GreenLamp.Location = new System.Drawing.Point(50, 3);
+            this.GreenLamp.Name = "GreenLamp";
+            this.GreenLamp.Size = new System.Drawing.Size(35, 35);
+            this.GreenLamp.TabIndex = 14;
+            this.GreenLamp.TabStop = false;
+            // 
+            // RedLightPanel
+            // 
+            this.RedLightPanel.Controls.Add(this.RedLamp);
+            this.RedLightPanel.Location = new System.Drawing.Point(41, 118);
+            this.RedLightPanel.Name = "RedLightPanel";
+            this.RedLightPanel.Size = new System.Drawing.Size(143, 66);
+            this.RedLightPanel.TabIndex = 15;
+            // 
+            // GreenLightPanel
+            // 
+            this.GreenLightPanel.Controls.Add(this.GreenLamp);
+            this.GreenLightPanel.Location = new System.Drawing.Point(41, 214);
+            this.GreenLightPanel.Name = "GreenLightPanel";
+            this.GreenLightPanel.Size = new System.Drawing.Size(143, 65);
+            this.GreenLightPanel.TabIndex = 16;
+            // 
             // UserInterfaceClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(932, 562);
+            this.Controls.Add(this.GreenLightPanel);
+            this.Controls.Add(this.RedLightPanel);
             this.Controls.Add(this.DisconnectFromServerButton);
             this.Controls.Add(this.ConnectToserverButton);
             this.Controls.Add(this.changeFontButton);
@@ -145,6 +189,10 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RedLamp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GreenLamp)).EndInit();
+            this.RedLightPanel.ResumeLayout(false);
+            this.GreenLightPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -162,6 +210,10 @@
         private System.Windows.Forms.Button DisconnectFromServerButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.PictureBox RedLamp;
+        private System.Windows.Forms.PictureBox GreenLamp;
+        private System.Windows.Forms.Panel RedLightPanel;
+        private System.Windows.Forms.Panel GreenLightPanel;
     }
 }
 

@@ -43,6 +43,8 @@
             this.GreenLamp = new System.Windows.Forms.PictureBox();
             this.RedLightPanel = new System.Windows.Forms.Panel();
             this.GreenLightPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RedLamp)).BeginInit();
@@ -155,19 +157,45 @@
             // 
             // RedLightPanel
             // 
+            this.RedLightPanel.Controls.Add(this.label1);
             this.RedLightPanel.Controls.Add(this.RedLamp);
-            this.RedLightPanel.Location = new System.Drawing.Point(41, 118);
+            this.RedLightPanel.Location = new System.Drawing.Point(41, 109);
             this.RedLightPanel.Name = "RedLightPanel";
-            this.RedLightPanel.Size = new System.Drawing.Size(143, 66);
+            this.RedLightPanel.Size = new System.Drawing.Size(141, 82);
             this.RedLightPanel.TabIndex = 15;
             // 
             // GreenLightPanel
             // 
+            this.GreenLightPanel.Controls.Add(this.label2);
             this.GreenLightPanel.Controls.Add(this.GreenLamp);
             this.GreenLightPanel.Location = new System.Drawing.Point(41, 214);
             this.GreenLightPanel.Name = "GreenLightPanel";
-            this.GreenLightPanel.Size = new System.Drawing.Size(143, 65);
+            this.GreenLightPanel.Size = new System.Drawing.Size(143, 82);
             this.GreenLightPanel.TabIndex = 16;
+            this.GreenLightPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(3, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "You are Offline";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(3, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "You Are Online";
             // 
             // UserInterfaceClass
             // 
@@ -193,7 +221,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RedLamp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GreenLamp)).EndInit();
             this.RedLightPanel.ResumeLayout(false);
+            this.RedLightPanel.PerformLayout();
             this.GreenLightPanel.ResumeLayout(false);
+            this.GreenLightPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,6 +245,8 @@
         private System.Windows.Forms.PictureBox GreenLamp;
         private System.Windows.Forms.Panel RedLightPanel;
         private System.Windows.Forms.Panel GreenLightPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonTypes
 {
-   public class ServerData
+   public class ServerData : EventArgs
     {
 
         public string IPofServer

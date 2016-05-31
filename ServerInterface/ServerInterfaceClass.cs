@@ -18,15 +18,6 @@ namespace ServerInterface
             InitializeComponent();
         }
 
-      
-
-      
-
-       
-
-       
-
-      
 
         ServerData sData = new ServerData();
 
@@ -36,16 +27,23 @@ namespace ServerInterface
         {
             ServerConnection Sr = new ServerConnection(sData);
             Sr.ShowDialog();
-            
-            //ServerisOnline(this, sData );
+            RedLightPanel.Visible = false;
+            GreenLightPanel.Visible = true;
+
+            ServerisOnline(this, sData);
 
         }
 
         private void ChangeIpButton_Click(object sender, EventArgs e)
         {
-            ChangeIPDialog ChipDialog = new ChangeIPDialog(sData);
-            //ChangeIPDialog ChIp = new ChangeIPDialog(SOargs);
-            ChipDialog.ShowDialog();
+
+         
+
+           
+                ChangeIPDialog ChipDialog = new ChangeIPDialog(sData);
+
+                ChipDialog.ShowDialog();
+            
         }
 
         private void ChangePortButton_Click(object sender, EventArgs e)
@@ -53,6 +51,11 @@ namespace ServerInterface
             ChangePortDialog Cpd = new ChangePortDialog(sData);
 
             Cpd.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

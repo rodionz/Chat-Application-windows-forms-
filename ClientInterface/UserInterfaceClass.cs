@@ -55,6 +55,8 @@ namespace ClientInterface
         private void ConnectToserverButton_Click(object sender, EventArgs e)
         {
             registration.ShowDialog();
+            RedLightPanel.Visible = false;
+            GreenLightPanel.Visible = true;
         }
 
         private void sendmessageButton_Click(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace ClientInterface
             MesData.Dt = DateTime.Now;
             //MesData.Messagecolor = 
             //MesData.Textmessage =
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonTypes;
+using ServerBI;
 
 namespace ServerInterface
 {
@@ -29,7 +30,9 @@ namespace ServerInterface
             Sr.ShowDialog();
             RedLightPanel.Visible = false;
             GreenLightPanel.Visible = true;
+            ServerLogic.StartListening(sData);
 
+            
             //////ServerisOnline(this, sData);
 
         }

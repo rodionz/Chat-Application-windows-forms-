@@ -14,22 +14,23 @@ namespace ServerBI
     public class ServerLogic
     {
 
-        public string IPAdress
-        { get; set; }
+        //public  string IPAdress
+        //{ get; set; }
 
-        public int Serverport
-        { get; set; }
+        //public int Serverport
+        //{ get; set; }
 
-        public List<UserData>  udl
-        { get; set; }
+        //public List<UserData>  udl
+        //{ get; set; }
 
       
 
 
-        public void  StartListening ()
+        public static void  StartListening (ServerData ServerData)
 
         {
-            TcpListener listener = new TcpListener(IPAddress.Loopback, Serverport);
+            TcpListener listener = new TcpListener(IPAddress.Parse(ServerData.IPofServer), ServerData.PortofServer);
+           
 
             try
             {

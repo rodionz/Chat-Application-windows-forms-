@@ -22,6 +22,7 @@ namespace ServerInterface
 
         ServerData Sdata;
         IPAddress ServerIP;
+        string adress;
        
 
         private void ConfirmIP_Click(object sender, EventArgs e)
@@ -30,11 +31,12 @@ namespace ServerInterface
             char[] delimit = { ' ' };
             string[] str = IPmaskedTextBox.Text.Split();
             string separator = "";
-            string adress = string.Join(separator, str);
+             adress = string.Join(separator, str);
             bool b = IPAddress.TryParse(adress, out ServerIP);
 
             if (b)
             {
+                Sdata.IPofServer = adress;
                  ipConfirmLabel.ForeColor = Color.Lime;
                 ipConfirmLabel.Text = "IP is Valid";
                 ServerBools.IPisVAlid = true;

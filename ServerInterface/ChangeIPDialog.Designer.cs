@@ -73,6 +73,7 @@
             this.label1.Size = new System.Drawing.Size(148, 26);
             this.label1.TabIndex = 25;
             this.label1.Text = "Enter IP Adress:";
+  
             // 
             // ChangeIPDialog
             // 

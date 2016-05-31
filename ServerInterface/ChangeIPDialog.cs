@@ -13,18 +13,18 @@ namespace ServerInterface
 {
     public partial class ChangeIPDialog : Form
     {
-        public ChangeIPDialog(ServerOnlineArgs so)
+        public ChangeIPDialog(ServerData sdatA)
         {
-            Soargs = so;
+            serData = sdatA;
             InitializeComponent();
         }
 
-
-        ServerOnlineArgs Soargs;
+        ServerData serData;
+        
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-            Soargs.IPofServer = IPmaskedTextBox.Text;
+            serData.IPofServer = IPmaskedTextBox.Text;
             Close();
         }
 
@@ -32,5 +32,7 @@ namespace ServerInterface
         {
             IPmaskedTextBox.Clear();
         }
+
+      
     }
 }

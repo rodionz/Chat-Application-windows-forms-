@@ -11,25 +11,25 @@ using CommonTypes;
 
 namespace ServerInterface
 {
-    public partial class ServerRegistration : Form
+    public partial class ServerConnection : Form
     {
-        public ServerRegistration(ServerOnlineArgs so)
+        public ServerConnection(ServerData sdat)
         {
-            Soarg = so;
+            Sdata = sdat;
             InitializeComponent();
         }
 
-
-        ServerOnlineArgs Soarg;
+        ServerData Sdata;
+       
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-            Soarg.IPofServer = IPmaskedTextBox.Text;
+           Sdata.IPofServer = IPmaskedTextBox.Text;
         }
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            Soarg.PortofServer = int.Parse(portTextBox.Text);
+           Sdata.PortofServer = int.Parse(portTextBox.Text);
         }
 
         private void CreateServerButton_Click(object sender, EventArgs e)

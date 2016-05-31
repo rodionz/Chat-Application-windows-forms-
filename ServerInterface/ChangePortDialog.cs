@@ -14,17 +14,18 @@ namespace ServerInterface
 {
     public partial class ChangePortDialog : Form
     {
-        public ChangePortDialog(ServerOnlineArgs so)
+        public ChangePortDialog(ServerData sDat)
         {
-            Soargs = so;
+            Sdata = sDat;
             InitializeComponent();
         }
 
-        ServerOnlineArgs Soargs;
+        ServerData Sdata;
+       
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            Soargs.PortofServer = int.Parse(portTextBox.Text);
+            Sdata.PortofServer = int.Parse(portTextBox.Text);
             Close();
         }
 

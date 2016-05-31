@@ -24,7 +24,18 @@ namespace ServerInterface
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-           Sdata.IPofServer = IPmaskedTextBox.Text;
+            if (IPmaskedTextBox.Text.Length != 0)
+            {
+                ipConfirmLabel.ForeColor = Color.Green;
+                ipConfirmLabel.Text = "Ok";
+                Sdata.IPofServer = IPmaskedTextBox.Text;
+            }
+
+            else
+            {
+                ipConfirmLabel.ForeColor = Color.Red;
+                ipConfirmLabel.Text = "Illigal Ip, Please Try Again";
+            }
         }
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
@@ -46,5 +57,7 @@ namespace ServerInterface
         {
             portTextBox.Clear();
         }
+
+        
     }
 }

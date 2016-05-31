@@ -37,6 +37,8 @@
             this.ConfirmIP = new System.Windows.Forms.Button();
             this.PortConfirmationButtom = new System.Windows.Forms.Button();
             this.CreateServerButton = new System.Windows.Forms.Button();
+            this.ipConfirmLabel = new System.Windows.Forms.Label();
+            this.portConfirmLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +68,7 @@
             this.IPmaskedTextBox.Name = "IPmaskedTextBox";
             this.IPmaskedTextBox.Size = new System.Drawing.Size(108, 20);
             this.IPmaskedTextBox.TabIndex = 18;
+          
             // 
             // portTextBox
             // 
@@ -131,12 +134,32 @@
             this.CreateServerButton.UseVisualStyleBackColor = true;
             this.CreateServerButton.Click += new System.EventHandler(this.CreateServerButton_Click);
             // 
-            // ServerRegistration
+            // ipConfirmLabel
+            // 
+            this.ipConfirmLabel.AutoSize = true;
+            this.ipConfirmLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ipConfirmLabel.Location = new System.Drawing.Point(628, 42);
+            this.ipConfirmLabel.Name = "ipConfirmLabel";
+            this.ipConfirmLabel.Size = new System.Drawing.Size(0, 19);
+            this.ipConfirmLabel.TabIndex = 28;
+            // 
+            // portConfirmLabel
+            // 
+            this.portConfirmLabel.AutoSize = true;
+            this.portConfirmLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portConfirmLabel.Location = new System.Drawing.Point(627, 118);
+            this.portConfirmLabel.Name = "portConfirmLabel";
+            this.portConfirmLabel.Size = new System.Drawing.Size(0, 19);
+            this.portConfirmLabel.TabIndex = 29;
+            // 
+            // ServerConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(737, 262);
+            this.Controls.Add(this.portConfirmLabel);
+            this.Controls.Add(this.ipConfirmLabel);
             this.Controls.Add(this.CreateServerButton);
             this.Controls.Add(this.PortConfirmationButtom);
             this.Controls.Add(this.ConfirmIP);
@@ -146,7 +169,7 @@
             this.Controls.Add(this.IPmaskedTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "ServerRegistration";
+            this.Name = "ServerConnection";
             this.Text = "ServerRegistration";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,5 +187,7 @@
         public System.Windows.Forms.Button ConfirmIP;
         private System.Windows.Forms.Button PortConfirmationButtom;
         public System.Windows.Forms.Button CreateServerButton;
+        private System.Windows.Forms.Label ipConfirmLabel;
+        private System.Windows.Forms.Label portConfirmLabel;
     }
 }

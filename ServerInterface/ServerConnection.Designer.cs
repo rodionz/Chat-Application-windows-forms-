@@ -39,6 +39,7 @@
             this.CreateServerButton = new System.Windows.Forms.Button();
             this.ipConfirmLabel = new System.Windows.Forms.Label();
             this.portConfirmLabel = new System.Windows.Forms.Label();
+            this.ServerCreationError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +69,6 @@
             this.IPmaskedTextBox.Name = "IPmaskedTextBox";
             this.IPmaskedTextBox.Size = new System.Drawing.Size(108, 20);
             this.IPmaskedTextBox.TabIndex = 18;
-          
             // 
             // portTextBox
             // 
@@ -126,7 +126,7 @@
             // CreateServerButton
             // 
             this.CreateServerButton.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.CreateServerButton.Location = new System.Drawing.Point(312, 191);
+            this.CreateServerButton.Location = new System.Drawing.Point(312, 218);
             this.CreateServerButton.Name = "CreateServerButton";
             this.CreateServerButton.Size = new System.Drawing.Size(151, 32);
             this.CreateServerButton.TabIndex = 27;
@@ -152,12 +152,23 @@
             this.portConfirmLabel.Size = new System.Drawing.Size(0, 19);
             this.portConfirmLabel.TabIndex = 29;
             // 
+            // ServerCreationError
+            // 
+            this.ServerCreationError.AutoSize = true;
+            this.ServerCreationError.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServerCreationError.ForeColor = System.Drawing.Color.Crimson;
+            this.ServerCreationError.Location = new System.Drawing.Point(112, 176);
+            this.ServerCreationError.Name = "ServerCreationError";
+            this.ServerCreationError.Size = new System.Drawing.Size(0, 28);
+            this.ServerCreationError.TabIndex = 30;
+            // 
             // ServerConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(737, 262);
+            this.ClientSize = new System.Drawing.Size(790, 262);
+            this.Controls.Add(this.ServerCreationError);
             this.Controls.Add(this.portConfirmLabel);
             this.Controls.Add(this.ipConfirmLabel);
             this.Controls.Add(this.CreateServerButton);
@@ -189,5 +200,6 @@
         public System.Windows.Forms.Button CreateServerButton;
         private System.Windows.Forms.Label ipConfirmLabel;
         private System.Windows.Forms.Label portConfirmLabel;
+        private System.Windows.Forms.Label ServerCreationError;
     }
 }

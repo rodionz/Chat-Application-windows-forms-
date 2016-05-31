@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonTypes;
+using System.Net;
 
 namespace ServerInterface
 {
@@ -20,44 +21,64 @@ namespace ServerInterface
         }
 
         ServerData Sdata;
+        IPAddress ServerIP;
        
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-            if (IPmaskedTextBox.Text.Length != 0)
+            this.IPmaskedTextBox.ValidatingType = typeof(IPAddress);
+            char[] delimit = { ' ' };
+            string[] str = IPmaskedTextBox.Text.Split();
+            string separator = "";
+            string adress = string.Join(separator, str);
+            bool b = IPAddress.TryParse(adress, out ServerIP);
+
+            if (b)
             {
-                ipConfirmLabel.ForeColor = Color.Green;
-                ipConfirmLabel.Text = "Ok";
-                Sdata.IPofServer = IPmaskedTextBox.Text;
+                ipConfirmLabel.ForeColor = Color.Lime;
+                ipConfirmLabel.Text = "IP is Valid";
             }
 
             else
             {
                 ipConfirmLabel.ForeColor = Color.Red;
-                ipConfirmLabel.Text = "Illigal Ip, Please Try Again";
+                ipConfirmLabel.Text = "IP is Invalid, please try again";
             }
         }
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-           Sdata.PortofServer = int.Parse(portTextBox.Text);
+            //int portnum = int.Parse(portTextBox.Text);
+
+            //if(portnum)
+
+            //Sdata.PortofServer = int.Parse(portTextBox.Text);
+            
         }
 
         private void CreateServerButton_Click(object sender, EventArgs e)
         {
+            if(ServerBools.ServerisValid)
             Close();
+
+            else
+            {
+                ServerCreationError.Text = "Please confirm IP Adress and Port Before Creating Server";
+            }
         }
 
         private void clearIP_Click(object sender, EventArgs e)
         {
+            ipConfirmLabel.Text = "";
             IPmaskedTextBox.Clear();
         }
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
+            portConfirmLabel.Text = "";
             portTextBox.Clear();
         }
 
-        
+      
     }
 }

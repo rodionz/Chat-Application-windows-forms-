@@ -15,5 +15,7 @@ namespace CommonTypes
         public int PortofServer
         { get; set; }
 
+     
+
     }
 }

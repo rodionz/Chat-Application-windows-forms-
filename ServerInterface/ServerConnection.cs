@@ -37,6 +37,7 @@ namespace ServerInterface
             {
                  ipConfirmLabel.ForeColor = Color.Lime;
                 ipConfirmLabel.Text = "IP is Valid";
+                ServerBools.IPisVAlid = true;
             }
 
             else
@@ -55,12 +56,13 @@ namespace ServerInterface
                 Sdata.PortofServer = portnum;
                 portConfirmLabel.ForeColor = Color.Lime;
                 portConfirmLabel.Text = "Port is Valid";
+                ServerBools.PortValid = true;
             }
 
             else
             {
                 portConfirmLabel.ForeColor = Color.Red;
-                portConfirmLabel.Text = "Port Number is Illigal \n Pelease choose port from 10000 to 65535";
+                portConfirmLabel.Text = "Port Number is Illigal \n Pelease choose port \n from 10000 to 65535";
 
             }
 

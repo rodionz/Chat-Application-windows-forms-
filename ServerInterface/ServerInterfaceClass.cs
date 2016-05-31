@@ -30,7 +30,7 @@ namespace ServerInterface
             RedLightPanel.Visible = false;
             GreenLightPanel.Visible = true;
 
-            ServerisOnline(this, sData);
+            //////ServerisOnline(this, sData);
 
         }
 

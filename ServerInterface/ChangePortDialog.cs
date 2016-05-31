@@ -31,10 +31,12 @@ namespace ServerInterface
 
             if (portnum.PortisValid())
             {
+                ServerBools.ResetBools();
                 Sdata.PortofServer = portnum;
-               portConfirmLabel.ForeColor = Color.Lime;
+                 portConfirmLabel.ForeColor = Color.Lime;
                 portConfirmLabel.Text = "Port is Valid";
-                //PortisChanged
+                ////PortisChanged(this, Sdata);
+                //Close();
             }
 
             else

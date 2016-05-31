@@ -36,10 +36,12 @@ namespace ServerInterface
 
             if (b)
             {
+                ServerBools.ResetBools();
                 ipConfirmLabel.ForeColor = Color.Lime;
                 ipConfirmLabel.Text = "IP is Valid";
                 serData.IPofServer = adress;
-                //IPisChanged()
+                //IPisChanged(this, serData);
+                //Close();
             }
 
             else

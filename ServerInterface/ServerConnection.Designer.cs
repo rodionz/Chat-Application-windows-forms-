@@ -155,11 +155,11 @@
             // ServerCreationError
             // 
             this.ServerCreationError.AutoSize = true;
-            this.ServerCreationError.Font = new System.Drawing.Font("Sitka Small", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServerCreationError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServerCreationError.ForeColor = System.Drawing.Color.Crimson;
             this.ServerCreationError.Location = new System.Drawing.Point(112, 176);
             this.ServerCreationError.Name = "ServerCreationError";
-            this.ServerCreationError.Size = new System.Drawing.Size(0, 28);
+            this.ServerCreationError.Size = new System.Drawing.Size(0, 24);
             this.ServerCreationError.TabIndex = 30;
             // 
             // ServerConnection
@@ -167,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(790, 262);
+            this.ClientSize = new System.Drawing.Size(875, 262);
             this.Controls.Add(this.ServerCreationError);
             this.Controls.Add(this.portConfirmLabel);
             this.Controls.Add(this.ipConfirmLabel);

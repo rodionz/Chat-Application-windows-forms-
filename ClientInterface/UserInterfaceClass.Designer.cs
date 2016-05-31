@@ -94,6 +94,7 @@
             this.sendmessageButton.TabIndex = 8;
             this.sendmessageButton.Text = "SEND";
             this.sendmessageButton.UseVisualStyleBackColor = true;
+            this.sendmessageButton.Click += new System.EventHandler(this.sendmessageButton_Click);
             // 
             // changeFontButton
             // 

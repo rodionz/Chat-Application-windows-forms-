@@ -18,6 +18,8 @@ namespace ClientInterface
             InitializeComponent();
         }
 
+        MessageData MesData = new MessageData();
+
         SignIn registration = new SignIn();
 
        public static List<UserData> ListofUsers = new List<UserData>();
@@ -55,6 +57,11 @@ namespace ClientInterface
             registration.ShowDialog();
         }
 
-       
+        private void sendmessageButton_Click(object sender, EventArgs e)
+        {
+            MesData.Dt = DateTime.Now;
+            //MesData.Messagecolor = 
+            //MesData.Textmessage =
+        }
     }
 }

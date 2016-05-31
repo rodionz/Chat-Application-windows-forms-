@@ -18,10 +18,10 @@ namespace CommonTypes
         public Color Messagecolor
         { get; set; }
 
-        public UserData Ud
+        public UserData Userdat
         { get; set; }
 
-        public Font Uf
+        public Font Userfont
         { get; set; }
     }
 }

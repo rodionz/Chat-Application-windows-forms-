@@ -32,6 +32,7 @@
             this.clearIP = new System.Windows.Forms.Button();
             this.IPmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.ipConfirmLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ConfirmIP
@@ -73,14 +74,23 @@
             this.label1.Size = new System.Drawing.Size(148, 26);
             this.label1.TabIndex = 25;
             this.label1.Text = "Enter IP Adress:";
-  
+            // 
+            // ipConfirmLabel
+            // 
+            this.ipConfirmLabel.AutoSize = true;
+            this.ipConfirmLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ipConfirmLabel.Location = new System.Drawing.Point(307, 65);
+            this.ipConfirmLabel.Name = "ipConfirmLabel";
+            this.ipConfirmLabel.Size = new System.Drawing.Size(0, 19);
+            this.ipConfirmLabel.TabIndex = 29;
             // 
             // ChangeIPDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(614, 64);
+            this.ClientSize = new System.Drawing.Size(614, 104);
+            this.Controls.Add(this.ipConfirmLabel);
             this.Controls.Add(this.ConfirmIP);
             this.Controls.Add(this.clearIP);
             this.Controls.Add(this.IPmaskedTextBox);
@@ -98,5 +108,6 @@
         private System.Windows.Forms.Button clearIP;
         public System.Windows.Forms.MaskedTextBox IPmaskedTextBox;
         public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ipConfirmLabel;
     }
 }

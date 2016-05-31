@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ServerInterface
 {
-   public class ServerBools
+   public static class ServerBools
     {
-        public static bool PortisValid
+        public static bool PortValid
         { get; set; } = false;
 
         public static bool IPisVAlid
@@ -19,7 +19,7 @@ namespace ServerInterface
 
             get
             {
-                if (PortisValid && ServerisValid)
+                if (PortValid && ServerisValid)
                     return true;
 
                 else
@@ -29,5 +29,17 @@ namespace ServerInterface
             }
 
         }
+
+    public static bool PortisValid(this int num)
+        {
+            if (num > 10000 && num < 65535)
+                return true;
+            else
+                return false;
+
+
+        }
+
+
     }
 }

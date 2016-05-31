@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonTypes;
+using System.Net;
 
 namespace ServerInterface
 {
@@ -20,17 +21,38 @@ namespace ServerInterface
         }
 
         ServerData serData;
-        
+        IPAddress ServerIP;
+        string adress;
+        public event EventHandler IPisChanged;
 
         private void ConfirmIP_Click(object sender, EventArgs e)
         {
-            serData.IPofServer = IPmaskedTextBox.Text;
-            Close();
+            this.IPmaskedTextBox.ValidatingType = typeof(IPAddress);
+            char[] delimit = { ' ' };
+            string[] str = IPmaskedTextBox.Text.Split();
+            string separator = "";
+            adress = string.Join(separator, str);
+            bool b = IPAddress.TryParse(adress, out ServerIP);
+
+            if (b)
+            {
+                ipConfirmLabel.ForeColor = Color.Lime;
+                ipConfirmLabel.Text = "IP is Valid";
+                serData.IPofServer = adress;
+                //IPisChanged()
+            }
+
+            else
+            {
+                ipConfirmLabel.ForeColor = Color.Red;
+                ipConfirmLabel.Text = "IP is Invalid, please try again";
+            }
         }
 
         private void clearIP_Click(object sender, EventArgs e)
         {
             IPmaskedTextBox.Clear();
+            ipConfirmLabel.Text = "";
         }
 
       

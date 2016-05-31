@@ -36,11 +36,11 @@
             this.ChangeIpButton = new System.Windows.Forms.Button();
             this.ChangePortButton = new System.Windows.Forms.Button();
             this.GreenLightPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.GreenLamp = new System.Windows.Forms.PictureBox();
             this.RedLightPanel = new System.Windows.Forms.Panel();
-            this.RedLamp = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.RedLamp = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.GreenLightPanel.SuspendLayout();
@@ -129,8 +129,20 @@
             this.GreenLightPanel.TabIndex = 18;
             this.GreenLightPanel.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(5, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Server is Online";
+            // 
             // GreenLamp
             // 
+            this.GreenLamp.Image = global::ServerInterface.Properties.Resources.green;
             this.GreenLamp.Location = new System.Drawing.Point(50, 3);
             this.GreenLamp.Name = "GreenLamp";
             this.GreenLamp.Size = new System.Drawing.Size(35, 35);
@@ -146,14 +158,6 @@
             this.RedLightPanel.Size = new System.Drawing.Size(143, 82);
             this.RedLightPanel.TabIndex = 17;
             // 
-            // RedLamp
-            // 
-            this.RedLamp.Location = new System.Drawing.Point(50, 3);
-            this.RedLamp.Name = "RedLamp";
-            this.RedLamp.Size = new System.Drawing.Size(35, 34);
-            this.RedLamp.TabIndex = 13;
-            this.RedLamp.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -166,16 +170,14 @@
             this.label1.Text = "Server is Offline";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // RedLamp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(5, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Server is Online";
+            this.RedLamp.Image = global::ServerInterface.Properties.Resources.red;
+            this.RedLamp.Location = new System.Drawing.Point(50, 3);
+            this.RedLamp.Name = "RedLamp";
+            this.RedLamp.Size = new System.Drawing.Size(35, 34);
+            this.RedLamp.TabIndex = 13;
+            this.RedLamp.TabStop = false;
             // 
             // ServerInterfaceClass
             // 

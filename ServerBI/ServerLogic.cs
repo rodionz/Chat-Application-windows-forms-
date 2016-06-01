@@ -13,6 +13,7 @@ namespace ServerBI
 {
     public class ServerLogic
     {
+        public static  event EventHandler Something;
 
         //public  string IPAdress
         //{ get; set; }
@@ -24,7 +25,7 @@ namespace ServerBI
         //{ get; set; }
 
       
-
+            
 
         public static void  StartListening (ServerData ServerData)
 
@@ -50,10 +51,11 @@ namespace ServerBI
                 listener.Stop();
             }
 
+
         }
 
 
-        public void StopListening()
+        public static void StopListening()
 
         {
 

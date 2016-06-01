@@ -15,7 +15,11 @@ namespace CommonTypes
         public int PortofServer
         { get; set; }
 
-     
+
+       public static ServerData CommonSd
+        { get; set; }
+
+
 
     }
 }

@@ -44,8 +44,10 @@
             this.RedLamp = new System.Windows.Forms.PictureBox();
             this.StopServerButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabChat.SuspendLayout();
             this.GreenLightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GreenLamp)).BeginInit();
             this.RedLightPanel.SuspendLayout();
@@ -95,6 +97,7 @@
             // 
             // tabChat
             // 
+            this.tabChat.Controls.Add(this.listBox1);
             this.tabChat.Location = new System.Drawing.Point(4, 22);
             this.tabChat.Name = "tabChat";
             this.tabChat.Padding = new System.Windows.Forms.Padding(3);
@@ -214,6 +217,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(48, 17);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(315, 212);
+            this.listBox1.TabIndex = 0;
+            // 
             // ServerInterfaceClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +243,7 @@
             this.Text = "ServerUi";
             this.panel1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.tabChat.ResumeLayout(false);
             this.GreenLightPanel.ResumeLayout(false);
             this.GreenLightPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GreenLamp)).EndInit();
@@ -260,6 +272,7 @@
         private System.Windows.Forms.Button StopServerButton;
         private System.Windows.Forms.TabPage tabChat;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

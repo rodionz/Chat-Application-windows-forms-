@@ -13,7 +13,10 @@ namespace ServerBI
 {
     public class ServerLogic
     {
-        public static  event EventHandler Something;
+        public delegate void Something();
+        public static event Something somethinghappend ; 
+
+   
 
         //public  string IPAdress
         //{ get; set; }
@@ -32,34 +35,40 @@ namespace ServerBI
           {
 
             Task t1 = Task.Run(() => StartListening(sData));
+          
             //Task t2 = new Task();
 
           }
 
 
 
-        public static async void StartListening(ServerData Sdat)
-        { 
-            TcpListener listener = new TcpListener(IPAddress.Parse(Sdat.IPofServer), Sdat.PortofServer);
+        public static void StartListening(ServerData Sdat)
+        {
+
+            for (int i = 0; i < 10; i++)
+            {
+                somethinghappend();
+            }
+            //TcpListener listener = new TcpListener(IPAddress.Parse(Sdat.IPofServer), Sdat.PortofServer);
            
 
-            try
-            {
-                listener.Start();
-                TcpClient talker = listener.AcceptTcpClient();
-                //    TcpClient talker = listener.AcceptTcpClientAsync();
-                using (Stream str = talker.GetStream())
-                {
+            //try
+            //{
+            //    listener.Start();
+            //    TcpClient talker = listener.AcceptTcpClient();
+            //    //    TcpClient talker = listener.AcceptTcpClientAsync();
+            //    using (Stream str = talker.GetStream())
+            //    {
 
 
-                }
+            //    }
 
-            }
+            //}
 
-            finally
-            {
-                listener.Stop();
-            }
+            //finally
+            //{
+            //    listener.Stop();
+            //}
 
 
         }

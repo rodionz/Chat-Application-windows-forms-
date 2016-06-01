@@ -82,9 +82,15 @@ namespace ServerInterface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ServerLogic.somethinghappend += PrintSomething;
             sData.IPofServer = "127.0.0.1";
             sData.PortofServer = 60000;
             ServerLogic.ServerOnline(sData);
+        }
+
+        public void PrintSomething()
+        {
+           listBox1.Items.Add ( "Hello World");
         }
     }
 }

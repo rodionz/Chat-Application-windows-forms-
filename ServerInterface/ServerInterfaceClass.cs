@@ -32,9 +32,9 @@ namespace ServerInterface
             GreenLightPanel.Visible = true;
            
 
-            ServerData.CommonSd = sData;
+            //ServerData.CommonSd = sData;
 
-            ServerLogic.StartListening(ServerData.CommonSd);
+            ServerLogic.ServerOnline(sData);
 
             //ServerisOnline += ServerLogic.StartListening(sData);
 
@@ -78,6 +78,13 @@ namespace ServerInterface
         private void tabChat_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sData.IPofServer = "127.0.0.1";
+            sData.PortofServer = 60000;
+            ServerLogic.ServerOnline(sData);
         }
     }
 }

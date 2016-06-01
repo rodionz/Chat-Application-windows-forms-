@@ -24,13 +24,23 @@ namespace ServerBI
         //public List<UserData>  udl
         //{ get; set; }
 
-      
-            
 
-        public static void  StartListening (ServerData ServerData)
 
-        {
-            TcpListener listener = new TcpListener(IPAddress.Parse(ServerData.IPofServer), ServerData.PortofServer);
+
+        public static void ServerOnline(ServerData sData)
+
+          {
+
+            Task t1 = Task.Run(() => StartListening(sData));
+            //Task t2 = new Task();
+
+          }
+
+
+
+        public static async void StartListening(ServerData Sdat)
+        { 
+            TcpListener listener = new TcpListener(IPAddress.Parse(Sdat.IPofServer), Sdat.PortofServer);
            
 
             try

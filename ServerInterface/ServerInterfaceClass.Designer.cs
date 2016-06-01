@@ -32,6 +32,7 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabChat = new System.Windows.Forms.TabPage();
             this.StartServerButton = new System.Windows.Forms.Button();
             this.ChangeIpButton = new System.Windows.Forms.Button();
             this.ChangePortButton = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.RedLamp = new System.Windows.Forms.PictureBox();
             this.StopServerButton = new System.Windows.Forms.Button();
-            this.tabChat = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.GreenLightPanel.SuspendLayout();
@@ -91,6 +92,17 @@
             this.tabPage5.Size = new System.Drawing.Size(392, 248);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "History";
+            // 
+            // tabChat
+            // 
+            this.tabChat.Location = new System.Drawing.Point(4, 22);
+            this.tabChat.Name = "tabChat";
+            this.tabChat.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChat.Size = new System.Drawing.Size(392, 248);
+            this.tabChat.TabIndex = 2;
+            this.tabChat.Text = "Chat";
+            this.tabChat.UseVisualStyleBackColor = true;
+            this.tabChat.Click += new System.EventHandler(this.tabChat_Click);
             // 
             // StartServerButton
             // 
@@ -192,16 +204,15 @@
             this.StopServerButton.UseVisualStyleBackColor = true;
             this.StopServerButton.Click += new System.EventHandler(this.StopServerButton_Click);
             // 
-            // tabChat
+            // button1
             // 
-            this.tabChat.Location = new System.Drawing.Point(4, 22);
-            this.tabChat.Name = "tabChat";
-            this.tabChat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChat.Size = new System.Drawing.Size(392, 248);
-            this.tabChat.TabIndex = 2;
-            this.tabChat.Text = "Chat";
-            this.tabChat.UseVisualStyleBackColor = true;
-            this.tabChat.Click += new System.EventHandler(this.tabChat_Click);
+            this.button1.Location = new System.Drawing.Point(80, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "MagicStart";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ServerInterfaceClass
             // 
@@ -209,6 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1048, 568);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.StopServerButton);
             this.Controls.Add(this.GreenLightPanel);
             this.Controls.Add(this.RedLightPanel);
@@ -247,6 +259,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button StopServerButton;
         private System.Windows.Forms.TabPage tabChat;
+        private System.Windows.Forms.Button button1;
     }
 }
 

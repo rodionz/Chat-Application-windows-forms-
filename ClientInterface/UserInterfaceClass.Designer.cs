@@ -42,8 +42,8 @@
             this.RedLamp = new System.Windows.Forms.PictureBox();
             this.GreenLamp = new System.Windows.Forms.PictureBox();
             this.RedLightPanel = new System.Windows.Forms.Panel();
-            this.GreenLightPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.GreenLightPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -87,6 +87,8 @@
             this.TextMessages.Name = "TextMessages";
             this.TextMessages.Size = new System.Drawing.Size(283, 39);
             this.TextMessages.TabIndex = 0;
+            this.TextMessages.FontChanged += new System.EventHandler(this.TextMessages_FontChanged);
+            this.TextMessages.ForeColorChanged += new System.EventHandler(this.TextMessages_ForeColorChanged);
             // 
             // sendmessageButton
             // 
@@ -164,16 +166,6 @@
             this.RedLightPanel.Size = new System.Drawing.Size(141, 82);
             this.RedLightPanel.TabIndex = 15;
             // 
-            // GreenLightPanel
-            // 
-            this.GreenLightPanel.Controls.Add(this.label2);
-            this.GreenLightPanel.Controls.Add(this.GreenLamp);
-            this.GreenLightPanel.Location = new System.Drawing.Point(41, 214);
-            this.GreenLightPanel.Name = "GreenLightPanel";
-            this.GreenLightPanel.Size = new System.Drawing.Size(143, 82);
-            this.GreenLightPanel.TabIndex = 16;
-            this.GreenLightPanel.Visible = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -184,7 +176,17 @@
             this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "You are Offline";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+         
+            // 
+            // GreenLightPanel
+            // 
+            this.GreenLightPanel.Controls.Add(this.label2);
+            this.GreenLightPanel.Controls.Add(this.GreenLamp);
+            this.GreenLightPanel.Location = new System.Drawing.Point(41, 214);
+            this.GreenLightPanel.Name = "GreenLightPanel";
+            this.GreenLightPanel.Size = new System.Drawing.Size(143, 82);
+            this.GreenLightPanel.TabIndex = 16;
+            this.GreenLightPanel.Visible = false;
             // 
             // label2
             // 

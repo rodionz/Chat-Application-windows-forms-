@@ -50,11 +50,19 @@ namespace ClientInterface
                 else
                 {
                     IPconfirmationLabel.ForeColor = Color.Red;
-                    IPconfirmationLabel.Text = "IP Denied, please try another one";
+                    IPconfirmationLabel.Text = "IP was rejected by the server, \n please enter coorect IP adress \n of the server ";
 
                 }
+            }
+            else
+            {
+
+                IPconfirmationLabel.Text = "Illigal IP,\n please enter IP adress in correct format";
+
 
             }
+
+            
         }
 
         private void clearIP_Click(object sender, EventArgs e)
@@ -143,5 +151,7 @@ namespace ClientInterface
                 Close();
             }
         }
+
+       
     }
 }

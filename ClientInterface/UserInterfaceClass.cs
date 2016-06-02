@@ -17,10 +17,12 @@ namespace ClientInterface
         {
             InitializeComponent();
         }
+        UserData uData = new UserData(1);
 
         MessageData MesData = new MessageData();
 
         SignIn registration = new SignIn();
+
 
        public static List<UserData> ListofUsers = new List<UserData>();
 
@@ -32,8 +34,9 @@ namespace ClientInterface
 
             if (result == DialogResult.OK)
             {
-
+                uData.Usercolor = colorDialog1.Color;
                 this.TextMessages.ForeColor = colorDialog1.Color;
+              
             }
         }
 
@@ -42,12 +45,15 @@ namespace ClientInterface
             fontDialog1.AllowScriptChange = true;
             fontDialog1.AllowSimulations = true;
             fontDialog1.ShowEffects = true;
+          
 
             DialogResult result = fontDialog1.ShowDialog();
 
             if (result == DialogResult.OK)
             {
+                uData.Ufont = fontDialog1.Font;
                 this.TextMessages.Font = fontDialog1.Font;
+            
 
             }
         }
@@ -66,7 +72,14 @@ namespace ClientInterface
             //MesData.Textmessage =
         }
 
-        private void label1_Click(object sender, EventArgs e)
+     
+
+        private void TextMessages_FontChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextMessages_ForeColorChanged(object sender, EventArgs e)
         {
 
         }

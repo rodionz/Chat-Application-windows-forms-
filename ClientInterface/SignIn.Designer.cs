@@ -44,7 +44,7 @@
             this.IPconfirmationLabel = new System.Windows.Forms.Label();
             this.NickNameConfirmationLabel = new System.Windows.Forms.Label();
             this.portConfirmationLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.IPlabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -210,14 +210,15 @@
             this.portConfirmationLabel.Size = new System.Drawing.Size(0, 16);
             this.portConfirmationLabel.TabIndex = 29;
             // 
-            // label4
+            // IPlabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "label4";
+            this.IPlabel.AutoSize = true;
+            this.IPlabel.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IPlabel.Location = new System.Drawing.Point(39, 67);
+            this.IPlabel.Name = "IPlabel";
+            this.IPlabel.Size = new System.Drawing.Size(55, 19);
+            this.IPlabel.TabIndex = 30;
+            this.IPlabel.Text = "label4";
             // 
             // label5
             // 
@@ -245,7 +246,7 @@
             this.ClientSize = new System.Drawing.Size(808, 381);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.IPlabel);
             this.Controls.Add(this.portConfirmationLabel);
             this.Controls.Add(this.NickNameConfirmationLabel);
             this.Controls.Add(this.IPconfirmationLabel);
@@ -287,7 +288,7 @@
         private System.Windows.Forms.Label IPconfirmationLabel;
         private System.Windows.Forms.Label NickNameConfirmationLabel;
         private System.Windows.Forms.Label portConfirmationLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label IPlabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
     }

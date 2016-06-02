@@ -40,24 +40,24 @@ namespace ClientInterface
 
             if (b == true)
             {
-                if (clientIpAddr.ToString() == Sdata.IPofServer)
+                if (clientIpAddr.ToString() == "127.0.0.1")
                 {
-                    IPconfirmationLabel.ForeColor = Color.Lime;
-                    IPconfirmationLabel.Text = "IP Confimed";
+                   IPlabel.ForeColor = Color.Lime;
+                   IPlabel.Text = "IP Confimed";
                     ClientUiBooleans.IPconfirmed = true;
                 }
 
                 else
                 {
-                    IPconfirmationLabel.ForeColor = Color.Red;
-                    IPconfirmationLabel.Text = "IP was rejected by the server, \n please enter coorect IP adress \n of the server ";
+                    IPlabel.ForeColor = Color.Red;
+                    IPlabel.Text = "IP was rejected by the server, please enter corect IP adress of the server ";
 
                 }
             }
             else
             {
-
-                IPconfirmationLabel.Text = "Illigal IP,\n please enter IP adress in correct format";
+                IPlabel.ForeColor = Color.Red;
+                IPlabel.Text = "Illigal IP, please enter IP adress in correct format";
 
 
             }
@@ -68,16 +68,19 @@ namespace ClientInterface
         private void clearIP_Click(object sender, EventArgs e)
         {
             IPmaskedTextBox.Clear();
+            IPlabel.Text = "";
         }
 
         private void UsernameClearButton_Click(object sender, EventArgs e)
         {
             UserNameBox.Clear();
+            label5.Text = "";
         }
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
             portTextBox.Clear();
+            label6.Text = "";
         }
 
         private void ClearAll()

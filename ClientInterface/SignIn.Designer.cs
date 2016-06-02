@@ -45,8 +45,9 @@
             this.NickNameConfirmationLabel = new System.Windows.Forms.Label();
             this.portConfirmationLabel = new System.Windows.Forms.Label();
             this.IPlabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.PortLabel = new System.Windows.Forms.Label();
+            this.ConnectLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -172,7 +173,7 @@
             // ConnectButton
             // 
             this.ConnectButton.Font = new System.Drawing.Font("David", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ConnectButton.Location = new System.Drawing.Point(333, 293);
+            this.ConnectButton.Location = new System.Drawing.Point(332, 278);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(120, 32);
             this.ConnectButton.TabIndex = 26;
@@ -216,27 +217,36 @@
             this.IPlabel.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IPlabel.Location = new System.Drawing.Point(39, 67);
             this.IPlabel.Name = "IPlabel";
-            this.IPlabel.Size = new System.Drawing.Size(55, 19);
+            this.IPlabel.Size = new System.Drawing.Size(0, 19);
             this.IPlabel.TabIndex = 30;
-            this.IPlabel.Text = "label4";
             // 
-            // label5
+            // NameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "label5";
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.Location = new System.Drawing.Point(42, 160);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(0, 19);
+            this.NameLabel.TabIndex = 31;
             // 
-            // label6
+            // PortLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 256);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "label6";
+            this.PortLabel.AutoSize = true;
+            this.PortLabel.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PortLabel.Location = new System.Drawing.Point(42, 256);
+            this.PortLabel.Name = "PortLabel";
+            this.PortLabel.Size = new System.Drawing.Size(0, 19);
+            this.PortLabel.TabIndex = 32;
+            // 
+            // ConnectLabel
+            // 
+            this.ConnectLabel.AutoSize = true;
+            this.ConnectLabel.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConnectLabel.Location = new System.Drawing.Point(185, 334);
+            this.ConnectLabel.Name = "ConnectLabel";
+            this.ConnectLabel.Size = new System.Drawing.Size(75, 19);
+            this.ConnectLabel.TabIndex = 33;
+            this.ConnectLabel.Text = "AAAAAA";
             // 
             // SignIn
             // 
@@ -244,8 +254,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(808, 381);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ConnectLabel);
+            this.Controls.Add(this.PortLabel);
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.IPlabel);
             this.Controls.Add(this.portConfirmationLabel);
             this.Controls.Add(this.NickNameConfirmationLabel);
@@ -289,7 +300,8 @@
         private System.Windows.Forms.Label NickNameConfirmationLabel;
         private System.Windows.Forms.Label portConfirmationLabel;
         private System.Windows.Forms.Label IPlabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label PortLabel;
+        private System.Windows.Forms.Label ConnectLabel;
     }
 }

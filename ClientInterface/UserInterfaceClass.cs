@@ -61,8 +61,11 @@ namespace ClientInterface
         private void ConnectToserverButton_Click(object sender, EventArgs e)
         {
             registration.ShowDialog();
-            RedLightPanel.Visible = false;
-            GreenLightPanel.Visible = true;
+            if (ClientUiBooleans.UserIsValid)
+            {
+                RedLightPanel.Visible = false;
+                GreenLightPanel.Visible = true;
+            }
         }
 
         private void sendmessageButton_Click(object sender, EventArgs e)

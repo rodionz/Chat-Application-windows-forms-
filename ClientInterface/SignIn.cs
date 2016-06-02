@@ -40,6 +40,9 @@ namespace ClientInterface
 
             if (b == true)
             {
+                //
+                //ToChange IP
+                //
                 if (clientIpAddr.ToString() == "127.0.0.1")
                 {
                    IPlabel.ForeColor = Color.Lime;
@@ -74,13 +77,13 @@ namespace ClientInterface
         private void UsernameClearButton_Click(object sender, EventArgs e)
         {
             UserNameBox.Clear();
-            label5.Text = "";
+            NameLabel.Text = "";
         }
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
             portTextBox.Clear();
-            label6.Text = "";
+            PortLabel.Text = "";
         }
 
         private void ClearAll()
@@ -92,10 +95,16 @@ namespace ClientInterface
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            if (Sdata.PortofServer == int.Parse(portTextBox.Text))
+            //
+            //ToChange port
+            //
+
+
+
+            if (portTextBox.Text == 6000.ToString())
             {
-                portConfirmationLabel.ForeColor = Color.Lime;
-                portConfirmationLabel.Text = "Port Confirmed";
+                PortLabel.ForeColor = Color.Lime;
+               PortLabel.Text = "Port Confirmed";
                 ClientUiBooleans.PORTconfirmed = true;
 
             }
@@ -104,8 +113,8 @@ namespace ClientInterface
             else
 
             {
-                portConfirmationLabel.ForeColor = Color.Red;
-                portConfirmationLabel.Text = "Port Denied, pleasetry again.";
+               PortLabel.ForeColor = Color.Red;
+                PortLabel.Text = "Port Denied, please try again.";
 
 
             }
@@ -121,37 +130,51 @@ namespace ClientInterface
 
             bool a = listofnames.Contains(UserNameBox.Text);
 
-            if (!a)
+            if (UserNameBox.Text != "")
             {
-                NickNameConfirmationLabel.ForeColor = Color.Lime;
-                NickNameConfirmationLabel.Text = "UserName confirmed";
-                ClientUiBooleans.NicnameConfirmed = true;
+                if (!a)
+                {
+                    NameLabel.ForeColor = Color.Lime;
+                    NameLabel.Text = "UserName confirmed";
+                    ClientUiBooleans.NicnameConfirmed = true;
+                }
+
+                else
+                {
+                    NameLabel.ForeColor = Color.Red;
+                    NameLabel.Text = "UserName already take, please choose another one";
+
+
+                }
             }
 
             else
             {
-                NickNameConfirmationLabel.ForeColor = Color.Red;
-                NickNameConfirmationLabel.Text = "UserName already take, please choose another one";
-
-
+                NameLabel.ForeColor = Color.Red;
+                NameLabel.Text = "Name is illigal";
             }
-
-
 
         }
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (ClientUiBooleans.IPconfirmed && ClientUiBooleans.NicnameConfirmed && ClientUiBooleans.PORTconfirmed)
+            if (ClientUiBooleans.UserIsValid)
             {
                 UserInterfaceClass.ListofUsers.Add(new UserData(UserInterfaceClass.ListofUsers.Count) { Username = this.UserNameBox.Text, UserIP = clientIpAddr.ToString() });
                 newUsercreated(this, NUEA);
                 new_user = UserInterfaceClass.ListofUsers.LastOrDefault();
                
-                ClientUiBooleans.UserIsValid = true;
+            
                 ClientUiBooleans.ResetBooleans();
                 ClearAll();
                 Close();
+            }
+
+            else
+            {
+                ConnectLabel.ForeColor = Color.Red;
+                ConnectLabel.Text = "You need to confirm IP, Por and UserName prior to connecting server";
+
             }
         }
 

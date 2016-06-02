@@ -9,12 +9,21 @@ namespace ClientInterface
     class ClientUiBooleans
     {
 
-        private static bool uservailid = false;
+       
         internal static bool UserIsValid
         {
-            get { return uservailid; }
+            get
+            {
+                if (nicknameconfirmed && portconfirmed && ipconfirmed)
+                    return true;
+                else
+                    return false;
 
-            set { uservailid = value; }
+
+
+            }
+
+            
 
 
         }
@@ -52,7 +61,7 @@ namespace ClientInterface
 
         {
 
-            uservailid = false;
+            
             nicknameconfirmed = false;
             ipconfirmed = false;
             portconfirmed = false;

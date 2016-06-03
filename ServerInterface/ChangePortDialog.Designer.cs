@@ -32,6 +32,7 @@
             this.Clearportbutton = new System.Windows.Forms.Button();
             this.portTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.portConfirmLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PortConfirmationButtom
@@ -58,7 +59,7 @@
             // 
             // portTextBox
             // 
-            this.portTextBox.Location = new System.Drawing.Point(263, 42);
+            this.portTextBox.Location = new System.Drawing.Point(264, 39);
             this.portTextBox.Mask = "00000";
             this.portTextBox.Name = "portTextBox";
             this.portTextBox.Size = new System.Drawing.Size(108, 20);
@@ -75,12 +76,22 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Enter you port:";
             // 
+            // portConfirmLabel
+            // 
+            this.portConfirmLabel.AutoSize = true;
+            this.portConfirmLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.portConfirmLabel.Location = new System.Drawing.Point(318, 85);
+            this.portConfirmLabel.Name = "portConfirmLabel";
+            this.portConfirmLabel.Size = new System.Drawing.Size(0, 19);
+            this.portConfirmLabel.TabIndex = 31;
+            // 
             // ChangePortDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(687, 100);
+            this.ClientSize = new System.Drawing.Size(687, 134);
+            this.Controls.Add(this.portConfirmLabel);
             this.Controls.Add(this.PortConfirmationButtom);
             this.Controls.Add(this.Clearportbutton);
             this.Controls.Add(this.portTextBox);
@@ -98,5 +109,6 @@
         private System.Windows.Forms.Button Clearportbutton;
         private System.Windows.Forms.MaskedTextBox portTextBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label portConfirmLabel;
     }
 }

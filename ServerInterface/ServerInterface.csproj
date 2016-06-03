@@ -102,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ServerInterfaceClass.resx">
       <DependentUpon>ServerInterfaceClass.cs</DependentUpon>
@@ -139,6 +140,16 @@
       <Project>{521ba932-6be5-481b-a3ed-c6b2bae91217}</Project>
       <Name>CommonData</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServerBI\ServerBL.csproj">
+      <Project>{68adba17-0d30-428c-abad-839517257566}</Project>
+      <Name>ServerBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

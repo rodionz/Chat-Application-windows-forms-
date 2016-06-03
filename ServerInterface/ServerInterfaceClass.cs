@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CommonTypes;
+using ServerBI;
 
 namespace ServerInterface
 {
@@ -29,8 +30,19 @@ namespace ServerInterface
             Sr.ShowDialog();
             RedLightPanel.Visible = false;
             GreenLightPanel.Visible = true;
+           
 
-            ServerisOnline(this, sData);
+            ServerData.CommonSd = sData;
+
+            ServerLogic.StartListening(ServerData.CommonSd);
+
+            //ServerisOnline += ServerLogic.StartListening(sData);
+
+            //////ServerisOnline(this, sData);
+
+            
+
+           
 
         }
 
@@ -54,6 +66,16 @@ namespace ServerInterface
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StopServerButton_Click(object sender, EventArgs e)
+        {
+            ServerLogic.StopListening();
+        }
+
+        private void tabChat_Click(object sender, EventArgs e)
         {
 
         }

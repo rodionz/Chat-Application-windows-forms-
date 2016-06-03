@@ -21,17 +21,36 @@ namespace ServerInterface
         }
 
         ServerData Sdata;
+
+        public event EventHandler PortisChanged;
        
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            Sdata.PortofServer = int.Parse(portTextBox.Text);
-            Close();
+            int portnum = int.Parse(portTextBox.Text);
+
+            if (portnum.PortisValid())
+            {
+                ServerBools.ResetBools();
+                Sdata.PortofServer = portnum;
+                 portConfirmLabel.ForeColor = Color.Lime;
+                portConfirmLabel.Text = "Port is Valid";
+                ////PortisChanged(this, Sdata);
+                //Close();
+            }
+
+            else
+            {
+                portConfirmLabel.ForeColor = Color.Red;
+                portConfirmLabel.Text = "Port Number is Illigal \n Pelease choose port from 10000 to 65535";
+
+            }
         }
 
         private void Clearportbutton_Click(object sender, EventArgs e)
         {
             portTextBox.Clear();
+            portConfirmLabel.Text = "";
         }
     }
 }

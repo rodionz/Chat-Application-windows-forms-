@@ -36,11 +36,13 @@
             this.ChangeIpButton = new System.Windows.Forms.Button();
             this.ChangePortButton = new System.Windows.Forms.Button();
             this.GreenLightPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.GreenLamp = new System.Windows.Forms.PictureBox();
             this.RedLightPanel = new System.Windows.Forms.Panel();
-            this.RedLamp = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.RedLamp = new System.Windows.Forms.PictureBox();
+            this.StopServerButton = new System.Windows.Forms.Button();
+            this.tabChat = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.GreenLightPanel.SuspendLayout();
@@ -63,6 +65,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.tabChat);
             this.tabControl2.Location = new System.Drawing.Point(23, 21);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -91,7 +94,7 @@
             // 
             // StartServerButton
             // 
-            this.StartServerButton.Location = new System.Drawing.Point(248, 442);
+            this.StartServerButton.Location = new System.Drawing.Point(262, 431);
             this.StartServerButton.Name = "StartServerButton";
             this.StartServerButton.Size = new System.Drawing.Size(103, 43);
             this.StartServerButton.TabIndex = 2;
@@ -101,7 +104,7 @@
             // 
             // ChangeIpButton
             // 
-            this.ChangeIpButton.Location = new System.Drawing.Point(451, 442);
+            this.ChangeIpButton.Location = new System.Drawing.Point(752, 48);
             this.ChangeIpButton.Name = "ChangeIpButton";
             this.ChangeIpButton.Size = new System.Drawing.Size(85, 43);
             this.ChangeIpButton.TabIndex = 3;
@@ -111,7 +114,7 @@
             // 
             // ChangePortButton
             // 
-            this.ChangePortButton.Location = new System.Drawing.Point(610, 442);
+            this.ChangePortButton.Location = new System.Drawing.Point(751, 110);
             this.ChangePortButton.Name = "ChangePortButton";
             this.ChangePortButton.Size = new System.Drawing.Size(86, 43);
             this.ChangePortButton.TabIndex = 4;
@@ -129,8 +132,20 @@
             this.GreenLightPanel.TabIndex = 18;
             this.GreenLightPanel.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(5, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Server is Online";
+            // 
             // GreenLamp
             // 
+            this.GreenLamp.Image = global::ServerInterface.Properties.Resources.green;
             this.GreenLamp.Location = new System.Drawing.Point(50, 3);
             this.GreenLamp.Name = "GreenLamp";
             this.GreenLamp.Size = new System.Drawing.Size(35, 35);
@@ -146,14 +161,6 @@
             this.RedLightPanel.Size = new System.Drawing.Size(143, 82);
             this.RedLightPanel.TabIndex = 17;
             // 
-            // RedLamp
-            // 
-            this.RedLamp.Location = new System.Drawing.Point(50, 3);
-            this.RedLamp.Name = "RedLamp";
-            this.RedLamp.Size = new System.Drawing.Size(35, 34);
-            this.RedLamp.TabIndex = 13;
-            this.RedLamp.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -166,23 +173,43 @@
             this.label1.Text = "Server is Offline";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // RedLamp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(5, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Server is Online";
+            this.RedLamp.Image = global::ServerInterface.Properties.Resources.red;
+            this.RedLamp.Location = new System.Drawing.Point(50, 3);
+            this.RedLamp.Name = "RedLamp";
+            this.RedLamp.Size = new System.Drawing.Size(35, 34);
+            this.RedLamp.TabIndex = 13;
+            this.RedLamp.TabStop = false;
+            // 
+            // StopServerButton
+            // 
+            this.StopServerButton.Location = new System.Drawing.Point(585, 431);
+            this.StopServerButton.Name = "StopServerButton";
+            this.StopServerButton.Size = new System.Drawing.Size(88, 43);
+            this.StopServerButton.TabIndex = 19;
+            this.StopServerButton.Text = "Stop Server";
+            this.StopServerButton.UseVisualStyleBackColor = true;
+            this.StopServerButton.Click += new System.EventHandler(this.StopServerButton_Click);
+            // 
+            // tabChat
+            // 
+            this.tabChat.Location = new System.Drawing.Point(4, 22);
+            this.tabChat.Name = "tabChat";
+            this.tabChat.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChat.Size = new System.Drawing.Size(392, 248);
+            this.tabChat.TabIndex = 2;
+            this.tabChat.Text = "Chat";
+            this.tabChat.UseVisualStyleBackColor = true;
+            this.tabChat.Click += new System.EventHandler(this.tabChat_Click);
             // 
             // ServerInterfaceClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(999, 568);
+            this.ClientSize = new System.Drawing.Size(1048, 568);
+            this.Controls.Add(this.StopServerButton);
             this.Controls.Add(this.GreenLightPanel);
             this.Controls.Add(this.RedLightPanel);
             this.Controls.Add(this.ChangePortButton);
@@ -218,6 +245,8 @@
         private System.Windows.Forms.PictureBox RedLamp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button StopServerButton;
+        private System.Windows.Forms.TabPage tabChat;
     }
 }
 

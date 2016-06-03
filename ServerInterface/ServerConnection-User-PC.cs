@@ -22,6 +22,7 @@ namespace ServerInterface
 
         ServerData Sdata;
         IPAddress ServerIP;
+        string adress;
        
 
         private void ConfirmIP_Click(object sender, EventArgs e)
@@ -30,13 +31,15 @@ namespace ServerInterface
             char[] delimit = { ' ' };
             string[] str = IPmaskedTextBox.Text.Split();
             string separator = "";
-            string adress = string.Join(separator, str);
+             adress = string.Join(separator, str);
             bool b = IPAddress.TryParse(adress, out ServerIP);
 
             if (b)
             {
-                ipConfirmLabel.ForeColor = Color.Lime;
+                Sdata.IPofServer = adress;
+                 ipConfirmLabel.ForeColor = Color.Lime;
                 ipConfirmLabel.Text = "IP is Valid";
+                ServerBools.IPisVAlid = true;
             }
 
             else
@@ -48,12 +51,23 @@ namespace ServerInterface
 
         private void PortConfirmationButtom_Click(object sender, EventArgs e)
         {
-            //int portnum = int.Parse(portTextBox.Text);
+            int portnum = int.Parse(portTextBox.Text);
 
-            //if(portnum)
+            if (portnum.PortisValid())
+            {
+                Sdata.PortofServer = portnum;
+                portConfirmLabel.ForeColor = Color.Lime;
+                portConfirmLabel.Text = "Port is Valid";
+                ServerBools.PortValid = true;
+            }
 
-            //Sdata.PortofServer = int.Parse(portTextBox.Text);
-            
+            else
+            {
+                portConfirmLabel.ForeColor = Color.Red;
+                portConfirmLabel.Text = "Port Number is Illigal \n Pelease choose port \n from 10000 to 65535";
+
+            }
+
         }
 
         private void CreateServerButton_Click(object sender, EventArgs e)
